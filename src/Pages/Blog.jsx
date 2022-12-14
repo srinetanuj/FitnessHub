@@ -14,6 +14,7 @@ import {
 } from "@chakra-ui/react";
 
 import React from "react";
+import { Link } from "react-router-dom";
 import AppUpdate from "../Components/AppUpdate";
 import KnowYourself from "../Components/KnowYourself";
 import OnTrends from "../Components/OnTrends";
@@ -108,24 +109,31 @@ const Blog = () => {
 
   <Stack direction={['column','column','column','row']} justifyContent="space-around">
 
-  <Text fontSize='20px'  color={'teal.700'} fontWeight="bold" > NUTRITION </Text>
-  <Text fontSize='20px'  color={'teal.700'} fontWeight="bold" > FITNESS </Text>
-  <Text fontSize='20px'  color={'teal.700'} fontWeight="bold" > FEATURES </Text>
-  <Text fontSize='20px' color={'teal.700'} fontWeight="bold" > RECIPES </Text>
-  <Text fontSize='20px'  color={'teal.700'} fontWeight="bold" >APP UPDATES </Text>
+  <Link to="/blog/nutrition"><Text fontSize='20px'  color={'teal.700'} fontWeight="bold" > NUTRITION </Text> </Link>
+  <Link to="/blog/fitness"><Text fontSize='20px'  color={'teal.700'} fontWeight="bold" > FITNESS </Text></Link>
+  <Link to="/blog/features"><Text fontSize='20px'  color={'teal.700'} fontWeight="bold" > FEATURES </Text> </Link>
+  <Link to="/blog/recipes"><Text fontSize='20px' color={'teal.700'} fontWeight="bold" > RECIPES </Text> </Link>
+  <Link to="/blog/appUpdate"><Text fontSize='20px'  color={'teal.700'} fontWeight="bold" >APP UPDATES </Text> </Link>
 
 </Stack>
 
 <Box p={5}>
-    <InputGroup>
-    <Input type='tel' placeholder='Search Blog Posts'  bg="white"  size='lg'/>
 
-    <InputRightElement
-      pointerEvents='none'
-      children={<Search2Icon color='white' />}
-      bg="rgb(255,103,51)"
-      />
+
+
+            {/* search box and uska button  */}
+    <InputGroup>
+    <Input type='text' placeholder='Search Blog Posts'  bg="white"  size='lg'/>
+
+  <Link to="/blog/search"> </Link>
+
+  <Button bg="rgb(255,103,51)" size='lg' _hover={"orange.200"} >
+  <Search2Icon color='white' size='xl'/>
+  </Button>
+      
+
   </InputGroup>
+
 </Box>
   </Stack>
 </Box>
@@ -163,8 +171,9 @@ const Blog = () => {
             Whether you’re a new or longtime user, here are some helpful tips to make the most of your nutrition tracking.
             </Text>
             
+            <Link to={"/blog/tips"}>
             <Button
-            width='70%'
+            // width='70%'
             size='lg'
                 bg="rgb(255,103,51)"
                 color={"white"}
@@ -174,6 +183,7 @@ const Blog = () => {
               >
                 GET STARTED
               </Button>
+            </Link>
           </Stack>
         </Flex>
         <Flex flex={1}>
@@ -221,8 +231,8 @@ const Blog = () => {
             Get up to date on all of the latest Cronometer updates, including cool new features like our Recipe Importer or Target Scheduler! 
             </Text>
             
-            <Button
-            width='70%'
+            <Link to={"/blog/appUpdate"}><Button
+            // width='70%'
             size='lg'
                 bg="rgb(255,103,51)"
                 color={"white"}
@@ -231,7 +241,7 @@ const Blog = () => {
                 }}
               >
                 SEE WHAT's NEW
-              </Button>
+              </Button></Link>
           </Stack>
         </Flex>
         

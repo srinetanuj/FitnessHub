@@ -2,6 +2,7 @@ import { ArrowForwardIcon } from '@chakra-ui/icons'
 import { Box, Button, Flex, Heading, Image, Stack, Text } from '@chakra-ui/react'
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const OnTrends = () => {
 
@@ -64,9 +65,11 @@ console.log(trendingdata)
     </Stack>
     
     <Box  pt={4}   textAlign='right'>
-      <Button rightIcon={<ArrowForwardIcon />} colorScheme='teal' variant='outline' >
+     <Link to={"/blog/nutrition"}>
+     <Button rightIcon={<ArrowForwardIcon />} colorScheme='teal' variant='outline' >
         VIEW MORE
       </Button>
+     </Link>
       </Box>
     
     

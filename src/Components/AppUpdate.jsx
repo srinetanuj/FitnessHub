@@ -2,6 +2,7 @@ import { ArrowForwardIcon } from '@chakra-ui/icons'
 import { Box, Button, Card, CardBody, Heading, Image, SimpleGrid, Text } from '@chakra-ui/react'
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const AppUpdate = () => {
 
@@ -69,9 +70,10 @@ console.log(mydata)
 
 
   <Box  pt={5}   textAlign='right'>
+  <Link to={"/blog/appUpdate"}>
   <Button rightIcon={<ArrowForwardIcon />} colorScheme='teal' variant='outline' >
     VIEW MORE
-  </Button>
+  </Button></Link>
   </Box>
 
 
