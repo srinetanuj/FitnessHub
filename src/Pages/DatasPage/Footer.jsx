@@ -42,8 +42,8 @@ const Footer = () => {
           >
             <Text fontWeight="900">The Company</Text>
             <Link>About Us</Link>
-            <Link>Crono Blog</Link>
-            <Link>Crono Forums</Link>
+            <Link>Fitness Blog</Link>
+            <Link>Fitness Forums</Link>
             <Link>Jobs</Link>
             <Link>Support</Link>
           </Box>
@@ -95,7 +95,7 @@ const Footer = () => {
         </SimpleGrid>
       </SimpleGrid>
       <Box display="flex" marginTop="1%" fontSize={{ base: "xs", md: "xl" }}>
-        <Link textDecoration="underline white">support@cronometer.com</Link>
+        <Link textDecoration="underline white">support@fitnesshub.com</Link>
       </Box>
       <Box textAlign="left" marginTop="4%" fontSize={{ base: "xs", md: "xl" }}>
         <Text>Copyright © 2011-2022</Text>
