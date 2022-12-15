@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Blog from "./Blog";
+import About from "./DatasPage/About";
 import AppUpdatePage from "./DatasPage/AppUpdatePage";
 import FeaturesPage from "./DatasPage/FeaturesPage";
 import FitnessPage from "./DatasPage/FitnessPage";
@@ -18,10 +19,13 @@ import SingleRecipesPage from "./SingleDataPage/SingleRecipesPage";
 import SingleSearchPage from "./SingleDataPage/SingleSearchPage";
 import SingleTipsPage from "./SingleDataPage/SingleTipsPage";
 
-export function AllRoutes (){
-
-return(
+export function AllRoutes() {
+  return (
     <Routes>
+
+      
+      
+
 
 <Route path="/blog" element={<Blog/>} />  
 
@@ -36,7 +40,7 @@ return(
 
 <Route path="/blog/tips" element={<TipsPage/>} />  
 <Route path="/blog/knowYourself" element={<KnowYourselfPage/>} />  
-
+<Route path="/About us" element={<About />} />
 
 {/* single page routes  */}
 <Route path="/blog/recentPost/:id" element={<SingleRecentPostPage/>} />
@@ -55,8 +59,7 @@ return(
 
 
 
+
     </Routes>
-)
-
-
+  );
 }
