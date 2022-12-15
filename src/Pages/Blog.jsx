@@ -13,17 +13,41 @@ import {
   Image,
 } from "@chakra-ui/react";
 
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import AppUpdate from "../Components/AppUpdate";
 import KnowYourself from "../Components/KnowYourself";
 import OnTrends from "../Components/OnTrends";
 import RecentPost from "../Components/RecentPost";
+import SeachComponent from "../Components/SeachComponent";
 
 // import css 
 import BlogCss from "../Pages/Blog.module.css"
 
+
 const Blog = () => {
+
+
+let [searchdata,setsearchdata] = useState("");
+let [data,setdata]= useState("")
+
+
+let handleChange =(e) =>{
+  // console.log(e.target.value)
+  setsearchdata(e.target.value)
+
+}
+
+
+let handleSubmit = () =>{
+  setdata(searchdata)
+  console.log(data, "when click on button")
+
+  setsearchdata(" ")
+
+}
+
+
   return (
     <Box bg={'gray.100'}> 
 
@@ -98,14 +122,14 @@ const Blog = () => {
      {/* 2nd div ha ya    */}
 
 
-<RecentPost/>
+<RecentPost />
 
 
 
 {/* blog archieves */}
 <Box style={{backgroundColor:"RGB(240 242 250)"}}  mt={10} py={10}>
-  <Stack w='80%'  m='auto' spacing={8} >
-  <Heading fontWeight='bold'>Blog Archives</Heading>
+  <Stack w='80%'  m='auto' spacing={9} >
+  <Heading fontWeight='bold' fontSize={50}>Blog Archives</Heading>
 
   <Stack direction={['column','column','column','row']} justifyContent="space-around">
 
@@ -118,16 +142,11 @@ const Blog = () => {
 </Stack>
 
 <Box p={5}>
-
-
-
             {/* search box and uska button  */}
     <InputGroup>
-    <Input type='text' placeholder='Search Blog Posts'  bg="white"  size='lg'/>
-
-  <Link to="/blog/search"> </Link>
-
-  <Button bg="rgb(255,103,51)" size='lg' _hover={"orange.200"} >
+    <Input type='text' placeholder='Search Blog Posts'  bg="white"  size='lg' onChange={handleChange} value={searchdata}/>
+  {/* <Link to="/blog/search"> </Link> */}
+  <Button bg="rgb(255,103,51)" size='lg' _hover={"orange.200"} onClick={handleSubmit}>
   <Search2Icon color='white' size='xl'/>
   </Button>
       
@@ -135,6 +154,14 @@ const Blog = () => {
   </InputGroup>
 
 </Box>
+
+
+
+
+<SeachComponent data={data} />
+
+
+
   </Stack>
 </Box>
 
@@ -296,8 +323,6 @@ const Blog = () => {
 
 
 <Box className={BlogCss.container}>
-
-  
   <Stack className={BlogCss.first} spacing={10} >
     <Heading fontSize='45px' fontWeight='bold'>Track your food, exercise and health metrics with the Cronometer app.</Heading>
     <Button  width='40%'
@@ -312,9 +337,6 @@ const Blog = () => {
 <Box className={BlogCss.second}>
   <Image src="https://cronometer.com/blog/wp-content/uploads/2022/11/crono-app.png" alt="track food" className={BlogCss.photo}/>
 </Box>
-
-
-
 
 </Box>
 
