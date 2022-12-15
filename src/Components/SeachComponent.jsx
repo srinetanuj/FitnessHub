@@ -5,17 +5,23 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 
-const NutritionPage = () => {
+const SeachComponent = (props) => {
+
+    console.log(props)
+
+    let {data }= props
 
   let [mydata,setmydata] = useState([]);
 let [error,seterror]= useState("");
-let [isloading,setisloading]= useState(false)
+let [isloading,setisloading]= useState(false);
 
+
+     // https://mahogany-impartial-dawn.glitch.me/items
 
 let getmydata= async () =>{
     try{
       setisloading(true)
-        let res= await axios.get(`https://humane-remarkable-oregano.glitch.me/nutrition`)
+      let res= await axios.get(`https://mahogany-impartial-dawn.glitch.me/items?q=${data}`)
         setmydata(res.data)
         setisloading(false)
     }catch(err){
@@ -25,10 +31,8 @@ let getmydata= async () =>{
 
 useEffect(() =>{
     getmydata()
-},[])
+},[data])
 
-
-// console.log(mydata)
 
 if(isloading){
   return (
@@ -37,6 +41,7 @@ if(isloading){
   <Skeleton height='600px' w='600px'/>
   <Skeleton height='600px' w='600px'/>
  
+
 </HStack>
 
   )
@@ -46,26 +51,60 @@ if(isloading){
 
 
 
+
+if(data=== ""){
+  return(
+    <div> </div>
+    )
+  }
+
+  if(data !== "" &&  mydata== ""){
+    return(
+      <Box>
+
+     <Box bg="rgb(255,121,65)" h={300} >
+        <Stack spacing={4} color="white" py="20">
+          <Heading size="3xl"> Search Results For: {data} </Heading>
+        </Stack>
+      <Heading>It seems we can't find what you're looking for. </Heading>
+ 
+      </Box>
+
+
+
+      </Box>
+    )
+  }
+
+
+
+  
+  console.log(mydata)
+
+
   return (
     <Box bg={'gray.100'}>
 
-{error !== ""  && <Heading> Error: {error}</Heading>}
+{error !== ""  && <Heading> Error: {error} </Heading>}
 
-<Box bg="rgb(255,121,65)" h={350} >
+<Box bg="rgb(255,121,65)" h={300} >
         <Stack spacing={4} color="white" py="20">
-          <Heading size="3xl"> Category: Nutrition </Heading>
+          <Heading size="3xl"> Search Results For: {data} </Heading>
         </Stack>
       </Box>
 
  <Box w='80%' m='auto'mt='-100px'>
   <SimpleGrid columns={{base:1 ,lg:2}} gap={10} textAlign='left'>
 
+
+
+
   {
 
 mydata.map((el) => (
 
-<Link to={`/blog/nutrition/${el.id}`}>
-<Card  borderRadius='10px' bg={'white'} key={el.id} >
+<Link to={`/blog/${el.id}`}>
+<Card  borderRadius='10px' bg={'white'} key={el.id} h={770}>
   <CardBody>
   <Image src={el.image} alt="croww" borderRadius={10} w="100%" h={{base: "350px", md:'450px'}} />
   <Heading fontSize='25px' fontWeight='bold' my={5}>{el.title}</Heading>
@@ -84,14 +123,7 @@ mydata.map((el) => (
 
   </SimpleGrid>
 
-
-
  </Box>
-
-
-
-
-
 
 
 
@@ -100,4 +132,4 @@ mydata.map((el) => (
   )
 }
 
-export default NutritionPage
+export default SeachComponent
