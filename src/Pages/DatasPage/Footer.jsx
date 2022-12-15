@@ -6,17 +6,27 @@ import { Image } from "@chakra-ui/image";
 const Footer = () => {
   return (
     <Box bg="#262a3b" color="white" padding="5% 3%">
-      <SimpleGrid gridTemplateColumns="repeat(4,1fr)" textAlign="left">
+      <SimpleGrid
+        gridTemplateColumns={{ base: "repeat(2,1fr)", md: "repeat(4,1fr)" }}
+        textAlign="left"
+      >
         <Box>
-          <Box maxWidth="40%" position="relative" bottom="5%">
+          <Box
+            maxWidth={{ base: "60%", md: "40%" }}
+            position="relative"
+            bottom="5%"
+          >
             <Image src={logo} />
           </Box>
         </Box>
         <Box>
-          <Box display="grid" flexDirection="column" gap={4}>
-            <Text fontSize="xl" fontWeight="900">
-              The Product
-            </Text>
+          <Box
+            display="grid"
+            flexDirection="column"
+            gap={4}
+            fontSize={{ base: "xs", md: "xl" }}
+          >
+            <Text fontWeight="900">The Product</Text>
             <Link>For Individuals</Link>
             <Link>For Professionals</Link>
             <Link>Privacy</Link>
@@ -24,10 +34,13 @@ const Footer = () => {
           </Box>
         </Box>
         <Box>
-          <Box display="grid" flexDirection="column" gap={4}>
-            <Text fontSize="xl" fontWeight="900">
-              The Company
-            </Text>
+          <Box
+            display="grid"
+            flexDirection="column"
+            gap={4}
+            fontSize={{ base: "xs", md: "xl" }}
+          >
+            <Text fontWeight="900">The Company</Text>
             <Link>About Us</Link>
             <Link>Crono Blog</Link>
             <Link>Crono Forums</Link>
@@ -36,10 +49,13 @@ const Footer = () => {
           </Box>
         </Box>
         <Box>
-          <Box display="grid" flexDirection="column" gap={4}>
-            <Text fontSize="xl" fontWeight="900">
-              Partners & Affiliates
-            </Text>
+          <Box
+            display="grid"
+            flexDirection="column"
+            gap={4}
+            fontSize={{ base: "xs", md: "xl" }}
+          >
+            <Text fontWeight="900">Partners & Affiliates</Text>
             <Link>Affiliate Program</Link>
             <Link>Media Kit</Link>
           </Box>
@@ -51,7 +67,10 @@ const Footer = () => {
           margin: "6% auto 3% auto",
         }}
       />
-      <SimpleGrid gridTemplateColumns="repeat(2,1fr)">
+      <SimpleGrid
+        gridTemplateColumns={{ base: "repeat(1,1fr)", md: "repeat(2,1fr)" }}
+        gap={{ base: "5", md: "none" }}
+      >
         <Box display="flex" gap={4}>
           <Box maxWidth="5%">
             <Image src="https://cdn1.cronometer.com/webflow/instragm-icon-snow-white.svg" />
@@ -75,10 +94,10 @@ const Footer = () => {
           </Box>
         </SimpleGrid>
       </SimpleGrid>
-      <Box display="flex" marginTop="1%">
+      <Box display="flex" marginTop="1%" fontSize={{ base: "xs", md: "xl" }}>
         <Link textDecoration="underline white">support@cronometer.com</Link>
       </Box>
-      <Box textAlign="left" marginTop="4%">
+      <Box textAlign="left" marginTop="4%" fontSize={{ base: "xs", md: "xl" }}>
         <Text>Copyright © 2011-2022</Text>
         <Text>All rights reserved</Text>
       </Box>

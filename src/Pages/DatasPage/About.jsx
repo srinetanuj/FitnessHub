@@ -1,24 +1,26 @@
 import { Image } from "@chakra-ui/image";
 import { Box, Link, Text } from "@chakra-ui/layout";
 import React from "react";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
 
 const About = () => {
   return (
     <Box>
-      <Navbar />
       <Box>
-        <Text fontSize="4xl" fontWeight="900" color="#262a3b" marginY="3%">
+        <Text
+          fontSize={{ base: "xl", md: "4xl" }}
+          fontWeight="900"
+          color="#262a3b"
+          marginY="3%"
+        >
           About the Company
         </Text>
       </Box>
       <Box
         color="#262a3b"
-        fontSize="1em"
+        fontSize={{ base: ".7em", md: "1em" }}
         lineHeight="1.5em"
         textAlign="left"
-        maxWidth="75%"
+        maxWidth={{ base: "85%", md: "75%" }}
         margin="auto"
         display="flex"
         flexDir="column"
@@ -64,16 +66,21 @@ const About = () => {
         <Image src="https://cdn1.cronometer.com/webflow/crono-team-1.jpg" />
       </Box>
       <Box>
-        <Text fontSize="4xl" fontWeight="900" color="#262a3b" marginY="3%">
+        <Text
+          fontSize={{ base: "xl", md: "4xl" }}
+          fontWeight="900"
+          color="#262a3b"
+          marginY="3%"
+        >
           Who We Are
         </Text>
       </Box>
       <Box
         color="#262a3b"
-        fontSize="1em"
+        fontSize={{ base: ".7em", md: "1em" }}
         lineHeight="1.5em"
         textAlign="left"
-        maxWidth="75%"
+        maxWidth={{ base: "85%", md: "75%" }}
         margin="auto"
         display="flex"
         flexDir="column"
@@ -130,12 +137,17 @@ const About = () => {
         }}
       />
       <Box marginY="3%">
-        <Text fontSize="xl">Help us spread the good word about nutrition.</Text>
-        <Link color="#005c5c" textDecoration="underline #005c5c">
+        <Text fontSize={{ base: "xs", md: "xl" }}>
+          Help us spread the good word about nutrition.
+        </Text>
+        <Link
+          fontSize={{ base: "xs", md: "xl" }}
+          color="#005c5c"
+          textDecoration="underline #005c5c"
+        >
           Become an Affiliate
         </Link>
       </Box>
-      <Footer />
     </Box>
   );
 };
