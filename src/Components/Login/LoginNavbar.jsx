@@ -11,9 +11,9 @@ const LoginNavbar = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        gap: "60rem",
+        gap: "60%",
         backgroundColor: "#262A3B",
-        color:"white"
+        color:"white",
       }}
     >
       <div style={{display:"flex", alignItems:"center"}}>
@@ -21,7 +21,7 @@ const LoginNavbar = () => {
         <p style={{fontSize:"25px", fontWeight:"600"}}>FitnessHub</p>
       </div>
       <div style={{ display: "flex", gap: "3rem" }}>
-        <Button variant="ghost">Home</Button>
+        <Button variant="ghost">Home</Button> 
         <button
           style={{
             backgroundColor: "#4299E1",
