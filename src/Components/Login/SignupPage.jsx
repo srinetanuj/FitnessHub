@@ -74,8 +74,8 @@ import {
                   </InputRightElement>
                 </InputGroup>
               </FormControl>
-              <Flex style={{gap:"25px", justifyContent:"center", alignItems:"center"}}>
-                <p>Login via</p>
+              <Flex style={{gap:"15px", justifyContent:"center", alignItems:"center", border:"1px solid #c8cfca", padding:"0.5rem", borderRadius:"7px", width:"80%", margin:"auto", marginTop:"1rem"}}>
+                <p>Sigin via</p>
                 <img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" alt="google" width="37px"/>
                 <img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="facebook" width="37px"/>
                 <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="apple" width="37px"/>
