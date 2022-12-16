@@ -37,7 +37,7 @@ useEffect(() =>{
 if(isloading){
   return (
 
-<HStack m='auto' w='80%' mt={30}>
+<HStack m='auto' w='80%' mt={30} gap={10}>
   <Skeleton height='600px' w='600px'/>
   <Skeleton height='600px' w='600px'/>
  

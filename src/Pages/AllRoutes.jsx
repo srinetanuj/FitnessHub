@@ -1,6 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 import Blog from "./Blog";
+
+import Dashboard from "./Dashboardpages/Dashboard";
+import Diary from "./Dashboardpages/Diary";
+import Help from "./Dashboardpages/Help";
+import Plans from "./Dashboardpages/Plans";
+
 import About from "./DatasPage/About";
+
 import AppUpdatePage from "./DatasPage/AppUpdatePage";
 import FeaturesPage from "./DatasPage/FeaturesPage";
 import FitnessPage from "./DatasPage/FitnessPage";
@@ -23,7 +30,43 @@ import SingleTipsPage from "./SingleDataPage/SingleTipsPage";
 export function AllRoutes() {
   return (
     <Routes>
-      <Route path="/blog" element={<Blog />} />
+
+
+<Route path="/blog" element={<Blog/>} />  
+
+
+{/* data page routes  */}
+<Route path="/blog/recentPost" element={<RecentPostPage/>} />  
+<Route path="/blog/nutrition" element={<NutritionPage/>} />  
+<Route path="/blog/fitness" element={<FitnessPage/>} />  
+<Route path="/blog/features" element={<FeaturesPage/>} /> 
+<Route path="/blog/recipes" element={<RecipesPage/>} />  
+<Route path="/blog/appUpdate" element={<AppUpdatePage/>} /> 
+
+<Route path="/blog/tips" element={<TipsPage/>} />  
+<Route path="/blog/knowYourself" element={<KnowYourselfPage/>} />  
+
+
+{/* single page routes  */}
+<Route path="/blog/recentPost/:id" element={<SingleRecentPostPage/>} />
+<Route path="/blog/nutrition/:id" element={<SingleNutritionPage/>} />  
+<Route path="/blog/fitness/:id" element={<SingleFitnessPage/>} />  
+<Route path="/blog/features/:id" element={<SingleFeaturesPage/>} /> 
+<Route path="/blog/recipes/:id" element={<SingleRecipesPage/>} />  
+<Route path="/blog/appUpdate/:id" element={<SingleAppUpdatePage/>} /> 
+
+<Route path="/blog/tips/:id" element={<SingleTipsPage/>} />  
+<Route path="/blog/knowYourself/:id" element={<SingleKnowYourSelfPage/>} /> 
+<Route path="/blog/:id" element={<SingleSearchPage/>} />
+
+
+{/* Dashboard Routes  */}
+<Route path='/dashboard'  element={<Dashboard/>}/>
+<Route path='/diary'  element={<Diary/>}/>
+<Route path='/plans'  element={<Plans/>}/>
+<Route path='/help'  element={<Help/>}/>
+
+
       <Route path="/about" element={<About />} />
       <Route path="/forms" element={<Forms />}></Route>
 
