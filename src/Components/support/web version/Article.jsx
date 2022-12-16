@@ -4,8 +4,8 @@ import {Flex,Link,Box,Heading} from "@chakra-ui/react"
 const Article = () => {
   return (
     <>
-    <Flex justify="center" m={10} direction={{base:"column", md:"row"}}  >
-        <Box mr={{base:"0", md:"50px"}} mb={10}>
+    <Flex justify="space-around" m={10} direction={{base:"column", md:"row"}}  >
+        <Box  mb={10}>
             <Heading size="sm" mb={5}>Recently viewed articles</Heading>
             <Flex color="rgba(255, 103, 51, 1)" direction="column" gap={3}>
                 <Link>Dashboard</Link>

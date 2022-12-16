@@ -1,14 +1,15 @@
 import React from 'react'
 import Snavbar from '../home/Hcomponent/Snavbar'
-import {Input,InputGroup,InputLeftElement,Flex,Link,Grid,GridItem,Heading,Text,} from "@chakra-ui/react"
+import {Input,InputGroup,InputLeftElement,Flex,Grid,GridItem,Heading,Text,} from "@chakra-ui/react"
 import { SearchIcon } from '@chakra-ui/icons'
+import { Link } from 'react-router-dom'
 
 const Whome = () => {
   return (
     <>
     <Snavbar/>
     <Flex justifyContent="space-around"   direction={{base:"column",md:"row"}} gap={5} alignItems="center" w="85%" m="auto" mt={10} mb={10}>
-  <Link>Coronometer</Link>
+  <Link to="/support">Coronometer</Link>
   <InputGroup w={{base:"80%",md:"30%"}}  >
     <InputLeftElement
       pointerEvents='none'
@@ -23,15 +24,15 @@ const Whome = () => {
     <GridItem>
       <Link><Heading as="h3" size="sm" mb={4}>Web - Quick Start Guide</Heading></Link>  
 <Flex direction="column" gap={4}>
-<Link>Dashboard</Link>
-<Link>Web - Quick Start Guide</Link>
+<Link to="/web/dashboard">Dashboard</Link>
+<Link to="/web/quick">Web - Quick Start Guide</Link>
 </Flex>
     </GridItem>
     <GridItem>
     <Link><Heading as="h3" size="sm" mb={4}>Diary</Heading></Link>  
 
 <Flex direction="column" gap={4}>
-<Link> Diary Overview</Link>
+<Link to="/web/dairy"> Diary Overview</Link>
 <Link>Add a Food</Link>
 <Link>Add an Exercise </Link>
 <Link>Add a Biometric </Link>

@@ -1,16 +1,17 @@
 import React from 'react'
 import Snavbar from '../home/Hcomponent/Snavbar'
-import {Input,InputGroup,InputLeftElement,Flex,Link,Heading,Text,Box,Image} from "@chakra-ui/react"
+import {Input,InputGroup,InputLeftElement,Flex,Heading,Text,Box,Image} from "@chakra-ui/react"
 import { SearchIcon } from '@chakra-ui/icons'
+import { Link } from 'react-router-dom'
 import Help from './Help'
 import Article from './Article'
 
-function Dashboard() {
+function WDashboard() {
   return (
  <>
  <Snavbar/>
  <Flex justifyContent="space-around"   direction={{base:"column",md:"row"}} gap={5} alignItems="center" w="85%" m="auto" mt={10} mb={10}>
-  <Link>Coronometer</Link>
+  <Link to="/support">Coronometer</Link>
   <InputGroup w={{base:"80%",md:"30%"}}  >
     <InputLeftElement
       pointerEvents='none'
@@ -22,12 +23,12 @@ function Dashboard() {
 <Flex justify="center" gap={10} direction={{base:"column",md:"row"}}>
     <Flex direction="column" gap={5} >
     <Heading as="h6" fontSize={20}>Article in the section</Heading>
-    <Box background="rgba(255, 103, 51, 1)" p={5} color="white">
-    <Link >Dashboard</Link>
+    <Box background="rgba(255, 103, 51, 1)" p={3} color="white">
+    <Link to="/web/dashboard" >Dashboard</Link>
     </Box>
     <Box 
-    _hover={{background:"rgba(255, 103, 51, 1)",color:"white"}} p={5}>
-    <Link> Web - Quick Start Guide</Link>
+    _hover={{background:"rgba(255, 103, 51, 1)",color:"white"}} p={3}>
+    <Link to="/web/quick"> Web - Quick Start Guide</Link>
     </Box>
     </Flex>
     <Flex direction="column" gap={10}>
@@ -44,15 +45,17 @@ function Dashboard() {
     </Text>
     <Image src="https://support.cronometer.com/hc/article_attachments/10827453047956" alt="imgdas" width="717px" height="290px"/>
 </Box>
-</Flex>
-</Flex>
-
 <Help/>
 <hr/>
 <Article/>
+</Flex>
+
+</Flex>
+
+
 
  </>
   )
 }
 
-export default Dashboard
+export default WDashboard

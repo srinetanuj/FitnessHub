@@ -6,7 +6,7 @@ import React from 'react'
 const Help = () => {
   return (
     <>
-     <Flex gap={3} justifyContent="center" m={10}>
+     <Flex gap={3} justifyContent="flex-start" m={10}>
           <Box>
             <Link
               href="https://www.facebook.com/login.php?skip_api_login=1&api_key=966242223397117&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fshare.php%3Ftitle%3DWeb%2B-%2BQuick%2BStart%2BGuide%26u%3Dhttps%253A%252F%252Fsupport.cronometer.com%252Fhc%252Fen-us%252Farticles%252F360021897491-Web-Quick-Start-Guide&cancel_url=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Fclose_window%2F%3Fapp_id%3D966242223397117%26connect%3D0%23_%3D_&display=popup&locale=en_GB"

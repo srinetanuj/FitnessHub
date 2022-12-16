@@ -1,5 +1,6 @@
 import React from 'react'
-import { Box,Flex,Image,Link } from '@chakra-ui/react'
+import { Box,Flex,Image,} from '@chakra-ui/react'
+import { Link } from 'react-router-dom'
 
 
 const Snavbar = () => {
@@ -12,7 +13,7 @@ const Snavbar = () => {
         </Link>
     </Box>
     <Box>
-        <Link>Submit a request</Link>
+        <Link to="/request">Submit a request</Link>
         
     </Box>
 </Flex>
