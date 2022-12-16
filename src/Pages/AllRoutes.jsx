@@ -1,5 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import Blog from "./Blog";
+import Dashboard from "./Dashboardpages/Dashboard";
+import Diary from "./Dashboardpages/Diary";
+import Help from "./Dashboardpages/Help";
+import Plans from "./Dashboardpages/Plans";
 import AppUpdatePage from "./DatasPage/AppUpdatePage";
 import FeaturesPage from "./DatasPage/FeaturesPage";
 import FitnessPage from "./DatasPage/FitnessPage";
@@ -51,6 +55,11 @@ return(
 <Route path="/blog/:id" element={<SingleSearchPage/>} />
 
 
+{/* Dashboard Routes  */}
+<Route path='/dashboard'  element={<Dashboard/>}/>
+<Route path='/diary'  element={<Diary/>}/>
+<Route path='/plans'  element={<Plans/>}/>
+<Route path='/help'  element={<Help/>}/>
 
 
 
