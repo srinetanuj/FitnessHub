@@ -1,6 +1,7 @@
 import React from 'react'
-import {Input,InputGroup,InputLeftElement,Flex,Link,Heading,Text,Box,Image,Container, UnorderedList, ListItem} from "@chakra-ui/react"
+import {Input,InputGroup,InputLeftElement,Flex,Heading,Text,Box,Image,Container, UnorderedList, ListItem} from "@chakra-ui/react"
 import { SearchIcon } from '@chakra-ui/icons'
+import { Link } from 'react-router-dom'
 import Snavbar from '../../home/Hcomponent/Snavbar'
 import Help from '../Help'
 import Article from '../Article'
@@ -10,7 +11,7 @@ const Dairy = () => {
  <>
  <Snavbar/>
  <Flex justifyContent="space-around"   direction={{base:"column",md:"row"}} gap={5} alignItems="center" w="85%" m="auto" mt={10} mb={10}>
-  <Link>Coronometer</Link>
+  <Link to="/support">Coronometer</Link>
   <InputGroup w={{base:"80%",md:"30%"}}  >
     <InputLeftElement
       pointerEvents='none'
@@ -105,11 +106,12 @@ Energy Summary
     
     <Image src="https://support.cronometer.com/hc/article_attachments/4892089591956/mceclip0.png" alt="imgdas" width="500px" height="500px"/>
 </Box>
-</Flex>
-</Flex>
 <Help/>
 <hr/>
 <Article/>
+</Flex>
+</Flex>
+
 
  </>
   )

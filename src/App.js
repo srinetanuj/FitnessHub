@@ -10,8 +10,8 @@ function App() {
     <div className="App">
 
    
-     {/* <AllRoutes/> */}
-     
+     <AllRoutes/>
+    
 
 
     

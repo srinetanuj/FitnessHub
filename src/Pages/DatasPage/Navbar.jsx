@@ -1,8 +1,10 @@
 import { Button } from "@chakra-ui/button";
-import { Box, Link, Text } from "@chakra-ui/layout";
+import { Box, Text } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/image";
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../Assets/Fitness_hub_bg_less.png";
+
 
 const Navbar = () => {
   return (
@@ -31,7 +33,7 @@ const Navbar = () => {
         justifyContent="space-evenly"
       >
         <Link>Products</Link>
-        <Link>Support</Link>
+        <Link to="/support" target="_blank">Support</Link>
         <Link>Blog</Link>
         <Link>Forums</Link>
         <Link>About</Link>

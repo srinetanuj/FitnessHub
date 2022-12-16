@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
 
-import {Input,InputGroup,InputLeftElement,Flex,Link,FormControl,FormErrorMessage,FormLabel,FormHelperText,Textarea,Button} from "@chakra-ui/react"
+import {Input,InputGroup,InputLeftElement,Flex,FormControl,FormErrorMessage,FormLabel,FormHelperText,Textarea,Button} from "@chakra-ui/react"
 import { SearchIcon } from '@chakra-ui/icons'
+import { Link } from 'react-router-dom'
 import Snavbar from './Hcomponent/Snavbar'
 
 const Request = () => {
@@ -42,7 +43,7 @@ setData({
     <Snavbar/>
     <hr></hr>
 <Flex justifyContent="space-around"   direction={{base:"column",md:"row"}} gap={5} alignItems="center" w="85%" m="auto" mt={10} mb={10}>
-  <Link>Coronometer</Link>
+  <Link to="/support">Coronometer</Link>
   <InputGroup w={{base:"80%",md:"30%"}}  >
     <InputLeftElement
       pointerEvents='none'

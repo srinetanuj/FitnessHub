@@ -18,7 +18,18 @@ import SingleRecentPostPage from "./SingleDataPage/SingleRecentPostPage";
 import SingleRecipesPage from "./SingleDataPage/SingleRecipesPage";
 import SingleSearchPage from "./SingleDataPage/SingleSearchPage";
 import SingleTipsPage from "./SingleDataPage/SingleTipsPage";
-
+import Shome from "../Components/support/home/Shome";
+import Request from "../Components/support/home/Request";
+import Whome from "../Components/support/web version/Whome";
+import MHome from "../Components/support/mobileapp/MHome";
+import Dashboard from "../Components/support/web version/Dashboard";
+import Quick from "../Components/support/web version/Quick";
+import Dairy from "../Components/support/web version/subcomponent/Dairy";
+import Mdashboard from "../Components/support/mobileapp/Mdashboard";
+import Mquick from "../Components/support/mobileapp/Mquick";
+import Phome from "../Components/support/professional/Phome";
+import Subsciption from "../Components/support/professional/Subsciption";
+import Fhome from "../Components/support/Faq/Fhome";
 export function AllRoutes() {
   return (
     <Routes>
@@ -54,6 +65,24 @@ export function AllRoutes() {
 <Route path="/blog/knowYourself/:id" element={<SingleKnowYourSelfPage/>} /> 
 <Route path="/blog/:id" element={<SingleSearchPage/>} />
 
+
+ {/* Akhilesh  */}
+
+<Route path="/support" element={<Shome/>}/>
+<Route path="/request" element={<Request/>}/>
+<Route path="/web" element={<Whome/>}/>
+<Route path="/web/dashboard" element={<Dashboard/>}/>
+<Route path="/web/quick" element={<Quick/>}/>
+<Route path="/web/dairy" element={<Dairy/>}/>
+
+
+<Route path="/mobile" element={<MHome/>}/>
+<Route path="/mobile/dashboard" element={<Mdashboard/>}/>
+<Route path="/mobile/quick" element={<Mquick/>}/>
+
+<Route path="/professional" element={<Phome/>}/>
+<Route path="/prof/sub" element={<Subsciption/>}/>
+<Route path="/faq" element={<Fhome/>}/>
 
 
 
