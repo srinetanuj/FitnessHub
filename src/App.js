@@ -14,14 +14,6 @@ function App() {
     <div className="App">
 
 
-   
-     <AllRoutes/>
-    
-
-
-
- 
-    
 
       <Navbar />
       <AllRoutes />
