@@ -1,6 +1,9 @@
 import './App.css';
+import Navbar from './Components/Navbar/Navbar';
 
 import { AllRoutes } from './Pages/AllRoutes';
+import Footer from './Pages/DatasPage/Footer';
+import Home from './Components/Home/Home';
 
 
 
@@ -9,12 +12,11 @@ function App() {
 
     <div className="App">
 
-   
-     {/* <AllRoutes/> */}
-     
-
-
+     <Navbar/>
+     <AllRoutes/>
     
+     <Home/>
+     <Footer/>
     </div>
 
   );

@@ -55,7 +55,7 @@ let handleSubmit = () =>{
     
       <Box bg="rgb(38,42,59)" h={350}>
         <Stack spacing={4} color="white" py="20">
-          <Heading size="3xl"> Cronometer Blog </Heading>
+          <Heading size="3xl"> Fitness Hub </Heading>
           <Heading size="lg">App Updates, Nutrition Tips & Inspiration</Heading>
         </Stack>
       </Box>

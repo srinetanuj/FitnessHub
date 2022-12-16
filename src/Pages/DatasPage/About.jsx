@@ -1,13 +1,12 @@
 import { Image } from "@chakra-ui/image";
 import { Box, Link, Text } from "@chakra-ui/layout";
 import React from "react";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
+
 
 const About = () => {
   return (
     <Box>
-      <Navbar />
+
       <Box>
         <Text fontSize="4xl" fontWeight="900" color="#262a3b" marginY="3%">
           About the Company
@@ -135,7 +134,7 @@ const About = () => {
           Become an Affiliate
         </Link>
       </Box>
-      <Footer />
+    
     </Box>
   );
 };

@@ -23,9 +23,6 @@ export function AllRoutes() {
   return (
     <Routes>
 
-      
-      
-
 
 <Route path="/blog" element={<Blog/>} />  
 
@@ -40,7 +37,7 @@ export function AllRoutes() {
 
 <Route path="/blog/tips" element={<TipsPage/>} />  
 <Route path="/blog/knowYourself" element={<KnowYourselfPage/>} />  
-<Route path="/About us" element={<About />} />
+<Route path="/about" element={<About />} />
 
 {/* single page routes  */}
 <Route path="/blog/recentPost/:id" element={<SingleRecentPostPage/>} />
