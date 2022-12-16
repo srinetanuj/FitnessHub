@@ -1,9 +1,17 @@
 import { Route, Routes } from "react-router-dom";
 import Blog from "./Blog";
+
+import Dashboard from "./Dashboardpages/Dashboard";
+import Diary from "./Dashboardpages/Diary";
+import Help from "./Dashboardpages/Help";
+import Plans from "./Dashboardpages/Plans";
+
 import About from "./DatasPage/About";
+
 import AppUpdatePage from "./DatasPage/AppUpdatePage";
 import FeaturesPage from "./DatasPage/FeaturesPage";
 import FitnessPage from "./DatasPage/FitnessPage";
+import Forms from "./DatasPage/Forms";
 import KnowYourselfPage from "./DatasPage/KnowYourselfPage";
 import NutritionPage from "./DatasPage/NutritionPage";
 import RecentPostPage from "./DatasPage/RecentPostPage";
@@ -22,7 +30,7 @@ import Shome from "../Components/support/home/Shome";
 import Request from "../Components/support/home/Request";
 import Whome from "../Components/support/web version/Whome";
 import MHome from "../Components/support/mobileapp/MHome";
-import Dashboard from "../Components/support/web version/Dashboard";
+import WDashboard from "../Components/support/web version/WDashboard";
 import Quick from "../Components/support/web version/Quick";
 import Dairy from "../Components/support/web version/subcomponent/Dairy";
 import Mdashboard from "../Components/support/mobileapp/Mdashboard";
@@ -33,9 +41,6 @@ import Fhome from "../Components/support/Faq/Fhome";
 export function AllRoutes() {
   return (
     <Routes>
-
-      
-      
 
 
 <Route path="/blog" element={<Blog/>} />  
@@ -51,7 +56,7 @@ export function AllRoutes() {
 
 <Route path="/blog/tips" element={<TipsPage/>} />  
 <Route path="/blog/knowYourself" element={<KnowYourselfPage/>} />  
-<Route path="/About us" element={<About />} />
+
 
 {/* single page routes  */}
 <Route path="/blog/recentPost/:id" element={<SingleRecentPostPage/>} />
@@ -64,6 +69,7 @@ export function AllRoutes() {
 <Route path="/blog/tips/:id" element={<SingleTipsPage/>} />  
 <Route path="/blog/knowYourself/:id" element={<SingleKnowYourSelfPage/>} /> 
 <Route path="/blog/:id" element={<SingleSearchPage/>} />
+
 
 
  {/* Akhilesh  */}
@@ -85,10 +91,42 @@ export function AllRoutes() {
 <Route path="/faq" element={<Fhome/>}/>
 
 
+{/* Dashboard Routes  */}
+<Route path='/wdashboard'  element={<WDashboard/>}/>
+<Route path='/diary'  element={<Diary/>}/>
+<Route path='/plans'  element={<Plans/>}/>
+<Route path='/help'  element={<Help/>}/>
 
 
 
+      <Route path="/about" element={<About />} />
+      <Route path="/forms" element={<Forms />}></Route>
 
+      {/* data page routes  */}
+      <Route path="/blog/recentPost" element={<RecentPostPage />} />
+      <Route path="/blog/nutrition" element={<NutritionPage />} />
+      <Route path="/blog/fitness" element={<FitnessPage />} />
+      <Route path="/blog/features" element={<FeaturesPage />} />
+      <Route path="/blog/recipes" element={<RecipesPage />} />
+      <Route path="/blog/appUpdate" element={<AppUpdatePage />} />
+
+      <Route path="/blog/tips" element={<TipsPage />} />
+      <Route path="/blog/knowYourself" element={<KnowYourselfPage />} />
+
+      {/* single page routes  */}
+      <Route path="/blog/recentPost/:id" element={<SingleRecentPostPage />} />
+      <Route path="/blog/nutrition/:id" element={<SingleNutritionPage />} />
+      <Route path="/blog/fitness/:id" element={<SingleFitnessPage />} />
+      <Route path="/blog/features/:id" element={<SingleFeaturesPage />} />
+      <Route path="/blog/recipes/:id" element={<SingleRecipesPage />} />
+      <Route path="/blog/appUpdate/:id" element={<SingleAppUpdatePage />} />
+
+      <Route path="/blog/tips/:id" element={<SingleTipsPage />} />
+      <Route
+        path="/blog/knowYourself/:id"
+        element={<SingleKnowYourSelfPage />}
+      />
+      <Route path="/blog/:id" element={<SingleSearchPage />} />
     </Routes>
   );
 }

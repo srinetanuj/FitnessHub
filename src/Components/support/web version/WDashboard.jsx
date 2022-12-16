@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import Help from './Help'
 import Article from './Article'
 
-function Dashboard() {
+function WDashboard() {
   return (
  <>
  <Snavbar/>
@@ -58,4 +58,4 @@ function Dashboard() {
   )
 }
 
-export default Dashboard
+export default WDashboard
