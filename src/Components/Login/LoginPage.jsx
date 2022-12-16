@@ -55,7 +55,7 @@ export default function Login() {
       >
         <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
           <Stack align={"center"}>
-            <Heading fontSize={"4xl"}>Log in to your account</Heading>
+            <Heading fontSize={"4xl"}>Log in to your Fitness Hub account</Heading>
             <Text fontSize={"lg"} color={"gray.600"}>
               Use you registered Email in <Link color={"blue.400"}>Fitness Hub;</Link>{" "}
             </Text>
