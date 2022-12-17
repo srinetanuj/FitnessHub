@@ -38,12 +38,21 @@ import Mquick from "../Components/support/mobileapp/Mquick";
 import Phome from "../Components/support/professional/Phome";
 import Subsciption from "../Components/support/professional/Subsciption";
 import Fhome from "../Components/support/Faq/Fhome";
+import Home from "../Components/Home/Home";
+import ProductPro from "../Components/Product/ProductPro";
+
 export function AllRoutes() {
   return (
     <Routes>
 
 
+<Route path="/" element={<Home/>}/>
+<Route path="/productPro" element={<ProductPro/>}/>
+
+
+
 <Route path="/blog" element={<Blog/>} />  
+
 
 
 {/* data page routes  */}
