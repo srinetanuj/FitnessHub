@@ -1,5 +1,3 @@
-import './App.css';
-
 
 
 import "./App.css";
@@ -12,7 +10,14 @@ import Footer from "./Pages/DatasPage/Footer";
 function App() {
   return (
     <div className="App">
-     <Navbar />
+
+    
+
+
+
+
+      <Navbar />
+
       <AllRoutes />
       <Footer />
     </div>
