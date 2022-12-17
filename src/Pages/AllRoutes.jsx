@@ -38,6 +38,8 @@ import Mquick from "../Components/support/mobileapp/Mquick";
 import Phome from "../Components/support/professional/Phome";
 import Subsciption from "../Components/support/professional/Subsciption";
 import Fhome from "../Components/support/Faq/Fhome";
+import Login from "../Components/Login/LoginPage";
+import SignupCard from "../Components/Login/SignupPage";
 export function AllRoutes() {
   return (
     <Routes>
@@ -101,7 +103,8 @@ export function AllRoutes() {
 
       <Route path="/about" element={<About />} />
       <Route path="/forms" element={<Forms />}></Route>
-
+      <Route path="/login" element={<Login />}></Route>
+      <Route path="/signup" element={<SignupCard />}></Route>
      
      
     </Routes>

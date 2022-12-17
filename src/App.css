@@ -38,10 +38,3 @@
 }
 
 /* Navbar CSS done below */
-
-@media (max-width: 850px) {
-  .navbar-resp div {
-    display: flex;
-    gap: -10px;
-  }
-}
