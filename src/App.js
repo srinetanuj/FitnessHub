@@ -12,18 +12,7 @@ import Footer from "./Pages/DatasPage/Footer";
 function App() {
   return (
     <div className="App">
-
-
-   
-     <AllRoutes/>
-    
-
-
-
- 
-    
-
-      <Navbar />
+     <Navbar />
       <AllRoutes />
       <Footer />
     </div>

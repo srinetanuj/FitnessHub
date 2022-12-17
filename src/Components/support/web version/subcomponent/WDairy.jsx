@@ -6,7 +6,7 @@ import Snavbar from '../../home/Hcomponent/Snavbar'
 import Help from '../Help'
 import Article from '../Article'
 
-const Dairy = () => {
+const WDairy = () => {
   return (
  <>
  <Snavbar/>
@@ -117,4 +117,4 @@ Energy Summary
   )
 }
 
-export default Dairy
+export default WDairy
