@@ -40,8 +40,7 @@ const Navbar = () => {
     <Box
       display="flex"
       justifyContent="space-between"
-      borderBottom="1px solid"
-      borderBottomColor="grey"
+      borderBottom="1px solid #D3D3D3"
       maxWidth="98%"
       margin="auto"
       paddingY="2%"
