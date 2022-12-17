@@ -50,9 +50,9 @@ const Navbar = () => {
           <Image src={logo} />
         </Box>
         <Box>
-          <Text fontSize={{ base: "lg", md: "4xl" }} fontWeight="700">
+          <Link to="/"><Text fontSize={{ base: "lg", md: "4xl" }} fontWeight="700">
             Fitnesshub
-          </Text>
+          </Text></Link>
         </Box>
       </Box>
       <Box
@@ -88,12 +88,12 @@ const Navbar = () => {
               <Link>
                 <Box display="flex" alignItems="center" gap={1}>
                   <Box maxWidth="20%">
-                    <Image src={logo} />
+                    <Link to="/"> <Image src={logo} /></Link>
                   </Box>
                   <Box textAlign="left">
-                    <Text fontSize="xl" fontWeight="600">
+                    <Link to="/"><Text fontSize="xl" fontWeight="600">
                       Fitnesshub
-                    </Text>
+                    </Text></Link>
                     <Text fontSize="md">For Individuals</Text>
                   </Box>
                 </Box>
@@ -104,9 +104,9 @@ const Navbar = () => {
                     <Image src={logo} />
                   </Box>
                   <Box textAlign="left">
-                    <Text fontSize="xl" fontWeight="600">
+                    <Link to="/productPro" ><Text fontSize="xl" fontWeight="600">
                       Fitnesshub Pro
-                    </Text>
+                    </Text></Link>
                     <Text fontSize="md">For Healthcare Professionals</Text>
                   </Box>
                 </Box>
