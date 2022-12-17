@@ -3,10 +3,10 @@ import React from 'react'
 import Sidebar from '../../Components/Dashboard/Sidebar'
 
 
-const Dashboard = () => {
+const LDashboard = () => {
   return (
     <Box>
-<Heading>Dashboard</Heading>
+<Heading> login ke baad walaa Dashboard</Heading>
 
 
 <Flex>
@@ -32,4 +32,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default LDashboard

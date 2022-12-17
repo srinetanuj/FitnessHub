@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import Blog from "./Blog";
-import Dashboard from "./Dashboardpages/Dashboard";
-import Diary from "./Dashboardpages/Diary";
-import Help from "./Dashboardpages/Help";
-import Plans from "./Dashboardpages/Plans";
+import LDashboard from "./Dashboardpages/LDashboard";
+import LDiary from "./Dashboardpages/LDiary";
+import LHelp from "./Dashboardpages/LHelp";
+import LPlans from "./Dashboardpages/LPlans";
 import AppUpdatePage from "./DatasPage/AppUpdatePage";
 import FeaturesPage from "./DatasPage/FeaturesPage";
 import FitnessPage from "./DatasPage/FitnessPage";
@@ -56,10 +56,10 @@ return(
 
 
 {/* Dashboard Routes  */}
-<Route path='/dashboard'  element={<Dashboard/>}/>
-<Route path='/diary'  element={<Diary/>}/>
-<Route path='/plans'  element={<Plans/>}/>
-<Route path='/help'  element={<Help/>}/>
+<Route path='/ldashboard'  element={<LDashboard/>}/>
+<Route path='/ldiary'  element={<LDiary/>}/>
+<Route path='/lplans'  element={<LPlans/>}/>
+<Route path='/lhelp'  element={<LHelp/>}/>
 
 
 

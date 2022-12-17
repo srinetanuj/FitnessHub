@@ -2,11 +2,11 @@ import { Box, Flex, Heading } from '@chakra-ui/react'
 import React from 'react'
 import Sidebar from '../../Components/Dashboard/Sidebar'
 
-const Plans = () => {
+const LPlans = () => {
 
   return (
     <Box>
-    <Heading>Plans</Heading>
+    <Heading>Login ka baad wala Plans</Heading>
     
     <Flex>
     <Sidebar/>
@@ -41,4 +41,4 @@ const Plans = () => {
   )
 }
 
-export default Plans
+export default LPlans

@@ -2,10 +2,10 @@ import { Box, Flex, Heading } from "@chakra-ui/react";
 import React from "react";
 import Sidebar from "../../Components/Dashboard/Sidebar";
 
-const Help = () => {
+const LHelp = () => {
   return (
     <Box>
-      <Heading>Help</Heading>
+      <Heading>Login ka baad wala Help</Heading>
 
       <Flex>
         <Sidebar/>
@@ -23,4 +23,4 @@ const Help = () => {
   );
 };
 
-export default Help;
+export default LHelp;

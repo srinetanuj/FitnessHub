@@ -32,7 +32,7 @@ const Sidebar = () => {
 
 <Divider/>
 
-<Link to='/dashboard'>
+<Link to='/ldashboard'>
 <Flex _hover={{color:'orange.500' }} >
    <Box mx={4}><RiDashboardFill /></Box>  
    <Text>Dashboard</Text>
@@ -42,7 +42,7 @@ const Sidebar = () => {
 
 
 
-<Link to='/diary'>
+<Link to='/ldiary'>
 <Flex _hover={{color:'orange.500' }} >
    <Box mx={4}><FaBook /></Box>  
    <Text>Diary</Text>
@@ -129,7 +129,7 @@ const Sidebar = () => {
 </Accordion>
 
 
-<Link to='/plans'>
+<Link to='/lplans'>
 <Flex py={2} _hover={{color:'orange.500' }}>
    <Box mx={4}><AiFillDollarCircle /></Box>  
    <Text>Plans</Text>
@@ -137,7 +137,7 @@ const Sidebar = () => {
 </Link> 
 
 <Divider/>
-<Link to='/help'>
+<Link to='/lhelp'>
 <Flex py={2} _hover={{color:'orange.500' }}>
    <Box mx={4}><AiFillQuestionCircle/></Box>  
    <Text>Help</Text>
