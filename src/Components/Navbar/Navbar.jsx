@@ -115,7 +115,7 @@ const Navbar = () => {
           </PopoverContent>
         </Popover>
 
-        <Link>
+        <Link to="/support" >
           <Text fontSize="xl" fontWeight="600">
             Support
           </Text>

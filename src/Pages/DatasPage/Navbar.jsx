@@ -33,7 +33,7 @@ const Navbar = () => {
         justifyContent="space-evenly"
       >
         <Link>Products</Link>
-        <Link to="/support" target="_blank">Support</Link>
+        <Link  >Support</Link>
         <Link>Blog</Link>
         <Link>Forums</Link>
         <Link>About</Link>
