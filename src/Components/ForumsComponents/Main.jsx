@@ -11,10 +11,9 @@ import { Link } from "react-router-dom";
 
 const Main = () => {
   var data = require("../../db.json");
-
   const [formdata, setFormdata] = React.useState(data);
 
-  console.log(formdata);
+  // console.log(formdata);
 
   const handleclick = (e) => {
     console.log(e.target.id);

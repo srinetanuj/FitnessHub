@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom"
 import {
   Box,
   SimpleGrid,
@@ -9,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import seen_sec from "./seen_sec.png";
 import Diet from "./Diet";
-import { Link } from "react-router-dom";
+
 
 const DietArr = [
   {
@@ -73,9 +74,9 @@ const Home = () => {
             </Text>
           </Box>
           <Box textAlign="left">
-            <Button bg="#1af070" size="lg" color="black" px={12}>
+            <Link to="/signup"> <Button bg="#1af070" size="lg" color="black" px={12}>
               Sign Up - It's Free!
-            </Button>
+            </Button></Link>
           </Box>
         </Box>
         <Box height="400px">
@@ -219,9 +220,9 @@ const Home = () => {
           Find you're getting the vitamins and minerals you need with our <br />{" "}
           food diary app
         </Text>
-        <Button bg="#1af070" size="lg" color="black" px={20} mt={4}>
+         <Link to="/signup"><Button bg="#1af070" size="lg" color="black" px={20} mt={4}>
           Sign Up - It's Free!{" "}
-        </Button>
+        </Button></Link>
       </Box>
 
       <Box mb={[20, 20, 20, 40, 40, 40]}>

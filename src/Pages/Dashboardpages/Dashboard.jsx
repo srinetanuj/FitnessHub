@@ -10,7 +10,7 @@ import {
   Stack,
   useColorModeValue,
 } from '@chakra-ui/react';
-import Chart1 from './Charts/Chart1';
+
 
 
 const Dashboard = () => {

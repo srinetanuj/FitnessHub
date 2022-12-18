@@ -32,9 +32,9 @@ const ProductPro = () => {
           <Heading my={5} as="h2" size="2xl">
             Free 30-Day Trial
           </Heading>
-          <Button bg="#24bf65" size="lg" px={20}>
+          <Link to="/signup"><Button bg="#24bf65" size="lg" px={20}>
             Sign Up
-          </Button>
+          </Button></Link>
         </Box>
         <Box>
           <Image
@@ -351,9 +351,9 @@ const ProductPro = () => {
           <Heading my={5} as="h2" size="2xl">
             Free 30-Day Trial
           </Heading>
-          <Button bg="#24bf65" size="lg" px={20}>
+           <Link to="/signup"><Button bg="#24bf65" size="lg" px={20}>
             Sign Up
-          </Button>
+          </Button></Link>
         </Box>
 
         <Box my={10}>

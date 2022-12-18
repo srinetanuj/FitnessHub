@@ -40,7 +40,7 @@ const Navbar = () => {
     setState(<ChevronDownIcon />);
   };
 
-  console.log(loginauth);
+  // console.log(loginauth);
   return (
     <Box
       display="flex"
@@ -153,7 +153,7 @@ const Navbar = () => {
         </Link>
         <Link to="/login">
         <Button bg="none" border="1px solid" onClick={handleLogin}>
-          {loginauth ? "LOGOUT" : "LOGIN"}
+          {loginauth ? "LOGIN" : "LOGOUT"}
         </Button>
         </Link>
       </Box>
