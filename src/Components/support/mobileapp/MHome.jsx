@@ -20,7 +20,7 @@ const MHome = () => {
 </Flex>
 <Heading as="h3" size="sm" mb={4}>Mobile App</Heading>
 <Text mb={20}>User Manual for the Cronometer Mobile App</Text>
-<Grid gridTemplateColumns={{base:"repeat(1,1fr)", md:"repeat(2,1fr)"}} gap={5}>
+<Grid gridTemplateColumns={{base:"repeat(1,1fr)", md:"repeat(2,1fr)"}} gap={5} mb={10}>
     <GridItem>
       <Link><Heading as="h3" size="sm" mb={4}>Mobile - Quick Start Guide</Heading></Link>  
 <Flex direction="column" gap={4}>

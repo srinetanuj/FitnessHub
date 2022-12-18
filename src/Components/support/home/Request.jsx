@@ -52,7 +52,7 @@ setData({
     <Input type='text' placeholder='Search' />
   </InputGroup>
 </Flex>
-<Flex justify="center" alignItems="center" direction="column" m="auto" w="58%" gap={4}>
+<Flex justify="center" alignItems="center" direction="column" m="auto" w="58%" gap={4} mb={10}>
 <FormControl isInvalid={isError}>
       <FormLabel>Email</FormLabel>
       <Input type='email' value={email} name="email" onChange={handleInputChange} />

@@ -74,9 +74,7 @@ const Content = () => {
           </Link>
         </GridItem>
       </Grid>
-      <hr style={{width:"90%",margin:"auto"}}/>
-    <hr style={{margin:"70px 0",}}/>
-    <Link p={50} to="/support">Coronometer</Link>
+     
     </>
   );
 };

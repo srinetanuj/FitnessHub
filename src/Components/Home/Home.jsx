@@ -324,9 +324,9 @@ const Home = () => {
             Client diet management for nutritionists, <br /> dietitians, research
             teams, schools, and hospitals
           </Text>
-          <Button colorScheme='black' variant='outline' px={20} py={5} mt={3}>
-            Lear About Pro
-          </Button>
+          <Link to="/productPro"><Button colorScheme='black' variant='outline' px={20} py={5} mt={3}>
+            Learn About Pro
+          </Button></Link>
         </Box>
         <Box  height="auto">
           <Image src="https://cdn1.cronometer.com/webflow/pro-hero-1-1-p-1080.png" alt="running"  w="80%" m="auto"/>

@@ -1,19 +1,21 @@
 import React from 'react'
-import { Box,Flex,Image,} from '@chakra-ui/react'
+import { Box,Flex,Image,Button} from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
+
+import logo from "../../../../Assets/Fitness_hub_bg_less.png";
 
 
 const Snavbar = () => {
   return (
     
-<Flex justifyContent="space-around" alignItems="center" position="relative" height="70px" p="0 5%">
+<Flex justifyContent="space-around" alignItems="center" position="relative" height="100px" p="0 5%" >
     <Box>
-        <Link >
-        <Image src="https://theme.zdassets.com/theme_assets/197219/7534276c1264c1a3347392f65cc19be0d259f9ca.png" alt ="slogo" w="300px" />
+        <Link to ="/support" >
+        <Image src={logo} alt ="slogo"  w={20}  />
         </Link>
     </Box>
     <Box>
-        <Link to="/request">Submit a request</Link>
+       <Button bg='rgba(255, 103, 51, 1)'><Link to="/request">Submit a request</Link></Button>  
         
     </Box>
 </Flex>
