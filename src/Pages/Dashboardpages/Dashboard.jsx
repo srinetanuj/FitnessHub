@@ -1,5 +1,5 @@
 import { Avatar, Box, Button, Flex, Heading, HStack, Tag, TagLabel } from '@chakra-ui/react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { AiFillQuestionCircle } from 'react-icons/ai'
 import Sidebar from '../../Components/Dashboard/Sidebar'
 
@@ -12,14 +12,18 @@ import {
 } from '@chakra-ui/react';
 
 
-
 const Dashboard = () => {
+
+
+
+
   return (
     <Box>
 
 
 
 <Flex>
+  
 <Sidebar/>
 
 <Box  bg='rgb(255,252,246)' border='2px solid' w='100%'>
@@ -198,6 +202,9 @@ const Dashboard = () => {
        <Button> GET THE TIPS </Button>
       </Stack>
     </Center>
+
+
+
 
 
   

@@ -49,8 +49,8 @@ import Formsdiscusion from "../Components/ForumsComponents/Formsdiscusion";
 export function AllRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/productPro" element={<ProductPro />} />
+      <Route path="/" element={<Home/>} />
+      <Route path="/productPro" element={<ProductPro/>} />
 
       <Route path="/blog" element={<Blog />} />
 
