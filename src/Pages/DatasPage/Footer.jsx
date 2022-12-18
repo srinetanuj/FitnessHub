@@ -12,7 +12,7 @@ const Footer = () => {
       >
         <Box>
           <Box
-            maxWidth={{ base: "60%", md: "40%" }}
+            maxWidth={{ base: "60%", md: "50%", lg: "40%" }}
             position="relative"
             bottom="5%"
           >
@@ -24,7 +24,7 @@ const Footer = () => {
             display="grid"
             flexDirection="column"
             gap={4}
-            fontSize={{ base: "xs", md: "xl" }}
+            fontSize={{ base: "xs", md: "md", lg: "xl" }}
           >
             <Text fontWeight="900">The Product</Text>
             <Link>For Individuals</Link>
@@ -38,7 +38,7 @@ const Footer = () => {
             display="grid"
             flexDirection="column"
             gap={4}
-            fontSize={{ base: "xs", md: "xl" }}
+            fontSize={{ base: "xs", md: "md", md: "xl" }}
           >
             <Text fontWeight="900">The Company</Text>
             <Link>About Us</Link>
@@ -53,7 +53,7 @@ const Footer = () => {
             display="grid"
             flexDirection="column"
             gap={4}
-            fontSize={{ base: "xs", md: "xl" }}
+            fontSize={{ base: "xs", md: "md", md: "xl" }}
           >
             <Text fontWeight="900">Partners & Affiliates</Text>
             <Link>Affiliate Program</Link>
@@ -94,10 +94,18 @@ const Footer = () => {
           </Box>
         </SimpleGrid>
       </SimpleGrid>
-      <Box display="flex" marginTop="1%" fontSize={{ base: "xs", md: "xl" }}>
+      <Box
+        display="flex"
+        marginTop="1%"
+        fontSize={{ base: "xs", md: "md", lg: "xl" }}
+      >
         <Link textDecoration="underline white">support@fitnesshub.com</Link>
       </Box>
-      <Box textAlign="left" marginTop="4%" fontSize={{ base: "xs", md: "xl" }}>
+      <Box
+        textAlign="left"
+        marginTop="4%"
+        fontSize={{ base: "xs", md: "md", lg: "xl" }}
+      >
         <Text>Copyright © 2011-2022</Text>
         <Text>All rights reserved</Text>
       </Box>
