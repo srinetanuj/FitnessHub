@@ -40,79 +40,70 @@ import Subsciption from "../Components/support/professional/Subsciption";
 import Fhome from "../Components/support/Faq/Fhome";
 import Home from "../Components/Home/Home";
 import ProductPro from "../Components/Product/ProductPro";
+import Formscategory from "../Components/ForumsComponents/Formscategory";
+import Formsdiscusion from "../Components/ForumsComponents/Formsdiscusion";
 
 export function AllRoutes() {
   return (
     <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/productPro" element={<ProductPro />} />
 
+      <Route path="/blog" element={<Blog />} />
 
-<Route path="/" element={<Home/>}/>
-<Route path="/productPro" element={<ProductPro/>}/>
+      {/* data page routes  */}
+      <Route path="/blog/recentPost" element={<RecentPostPage />} />
+      <Route path="/blog/nutrition" element={<NutritionPage />} />
+      <Route path="/blog/fitness" element={<FitnessPage />} />
+      <Route path="/blog/features" element={<FeaturesPage />} />
+      <Route path="/blog/recipes" element={<RecipesPage />} />
+      <Route path="/blog/appUpdate" element={<AppUpdatePage />} />
 
+      <Route path="/blog/tips" element={<TipsPage />} />
+      <Route path="/blog/knowYourself" element={<KnowYourselfPage />} />
 
+      {/* single page routes  */}
+      <Route path="/blog/recentPost/:id" element={<SingleRecentPostPage />} />
+      <Route path="/blog/nutrition/:id" element={<SingleNutritionPage />} />
+      <Route path="/blog/fitness/:id" element={<SingleFitnessPage />} />
+      <Route path="/blog/features/:id" element={<SingleFeaturesPage />} />
+      <Route path="/blog/recipes/:id" element={<SingleRecipesPage />} />
+      <Route path="/blog/appUpdate/:id" element={<SingleAppUpdatePage />} />
 
-<Route path="/blog" element={<Blog/>} />  
+      <Route path="/blog/tips/:id" element={<SingleTipsPage />} />
+      <Route
+        path="/blog/knowYourself/:id"
+        element={<SingleKnowYourSelfPage />}
+      />
+      <Route path="/blog/:id" element={<SingleSearchPage />} />
 
+      {/* Akhilesh  */}
 
+      <Route path="/support" element={<Shome />} />
+      <Route path="/request" element={<Request />} />
+      <Route path="/web" element={<Whome />} />
+      <Route path="/web/dashboard" element={<WDashboard />} />
+      <Route path="/web/quick" element={<Quick />} />
+      <Route path="/web/dairy" element={<WDairy />} />
 
-{/* data page routes  */}
-<Route path="/blog/recentPost" element={<RecentPostPage/>} />  
-<Route path="/blog/nutrition" element={<NutritionPage/>} />  
-<Route path="/blog/fitness" element={<FitnessPage/>} />  
-<Route path="/blog/features" element={<FeaturesPage/>} /> 
-<Route path="/blog/recipes" element={<RecipesPage/>} />  
-<Route path="/blog/appUpdate" element={<AppUpdatePage/>} /> 
+      <Route path="/mobile" element={<MHome />} />
+      <Route path="/mobile/dashboard" element={<Mdashboard />} />
+      <Route path="/mobile/quick" element={<Mquick />} />
 
-<Route path="/blog/tips" element={<TipsPage/>} />  
-<Route path="/blog/knowYourself" element={<KnowYourselfPage/>} />  
+      <Route path="/professional" element={<Phome />} />
+      <Route path="/prof/sub" element={<Subsciption />} />
+      <Route path="/faq" element={<Fhome />} />
 
-
-{/* single page routes  */}
-<Route path="/blog/recentPost/:id" element={<SingleRecentPostPage/>} />
-<Route path="/blog/nutrition/:id" element={<SingleNutritionPage/>} />  
-<Route path="/blog/fitness/:id" element={<SingleFitnessPage/>} />  
-<Route path="/blog/features/:id" element={<SingleFeaturesPage/>} /> 
-<Route path="/blog/recipes/:id" element={<SingleRecipesPage/>} />  
-<Route path="/blog/appUpdate/:id" element={<SingleAppUpdatePage/>} /> 
-
-<Route path="/blog/tips/:id" element={<SingleTipsPage/>} />  
-<Route path="/blog/knowYourself/:id" element={<SingleKnowYourSelfPage/>} /> 
-<Route path="/blog/:id" element={<SingleSearchPage/>} />
-
-
-
- {/* Akhilesh  */}
-
-<Route path="/support" element={<Shome/>}/>
-<Route path="/request" element={<Request/>}/>
-<Route path="/web" element={<Whome/>}/>
-<Route path="/web/dashboard" element={<WDashboard/>}/>
-<Route path="/web/quick" element={<Quick/>}/>
-<Route path="/web/dairy" element={<WDairy/>}/>
-
-
-<Route path="/mobile" element={<MHome/>}/>
-<Route path="/mobile/dashboard" element={<Mdashboard/>}/>
-<Route path="/mobile/quick" element={<Mquick/>}/>
-
-<Route path="/professional" element={<Phome/>}/>
-<Route path="/prof/sub" element={<Subsciption/>}/>
-<Route path="/faq" element={<Fhome/>}/>
-
-
-{/* Dashboard Routes  */}
-<Route path='/dashboard'  element={<Dashboard/>}/>
-<Route path='/diary'  element={<Diary/>}/>
-<Route path='/plans'  element={<Plans/>}/>
-<Route path='/help'  element={<Help/>}/>
-
-
+      {/* Dashboard Routes  */}
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/diary" element={<Diary />} />
+      <Route path="/plans" element={<Plans />} />
+      <Route path="/help" element={<Help />} />
 
       <Route path="/about" element={<About />} />
       <Route path="/forms" element={<Forms />}></Route>
-
-     
-     
+      <Route path="/forms/element" element={<Formscategory />}></Route>
+      <Route path="/forms/discusion" element={<Formsdiscusion />}></Route>
     </Routes>
   );
 }
