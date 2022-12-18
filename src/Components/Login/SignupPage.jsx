@@ -139,9 +139,10 @@ export default function SignupCard() {
         align={"center"}
         justify={"center"}
         bg={useColorModeValue("gray.50", "gray.800")}
-        mt="-12rem"
+        mt="-10rem"
+       
       >
-        <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
+        <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6} >
           <Stack align={"center"}>
             <Heading fontSize={"2xl"} textAlign={"center"}>
               Your Body Type
