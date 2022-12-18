@@ -55,7 +55,7 @@ let handleSubmit = () =>{
     
       <Box bg="rgb(38,42,59)" h={350}>
         <Stack spacing={4} color="white" py="20">
-          <Heading size="3xl"> Cronometer Blog </Heading>
+          <Heading size="3xl"> FitnessHub  Blog </Heading>
           <Heading size="lg">App Updates, Nutrition Tips & Inspiration</Heading>
         </Stack>
       </Box>
@@ -93,8 +93,9 @@ let handleSubmit = () =>{
               to live a healthier, happier life.
             </Text>
             
-            <Button
+         <Link to='/'> <Button
             width='70%'
+           px={20}
             size='lg'
                 bg={"teal.400"}
                 color={"white"}
@@ -103,7 +104,7 @@ let handleSubmit = () =>{
                 }}
               >
                 GET STARTED
-              </Button>
+              </Button></Link>
           </Stack>
         </Flex>
         <Flex flex={1.5}>
@@ -191,7 +192,7 @@ let handleSubmit = () =>{
               </Text>
               <br />{" "}
               <Text color="rgb(255,103,51)" as={"span"}>
-              Cronometer Tips & Tricks
+              FitnessHub  Tips & Tricks
               </Text>
             </Heading>
             <Text fontSize={{ base: "lg", lg: "xl" }} color={"gray.500"} alignItems="left">
@@ -255,7 +256,7 @@ let handleSubmit = () =>{
               </Text>
             </Heading>
             <Text fontSize={{ base: "lg", lg: "xl" }} color={"gray.500"} alignItems="left">
-            Get up to date on all of the latest Cronometer updates, including cool new features like our Recipe Importer or Target Scheduler! 
+            Get up to date on all of the latest FitnessHub  updates, including cool new features like our Recipe Importer or Target Scheduler! 
             </Text>
             
             <Link to={"/blog/appUpdate"}><Button
@@ -287,15 +288,15 @@ let handleSubmit = () =>{
   <Flex flex={1} textAlign='left'>
     <Stack>
       <Heading>Eat smarter. Live better.</Heading>
-      <Text fontSize='20px'>Track your foods, exercise, and health data with the Cronometer app.</Text>
+      <Text fontSize='20px'>Track your foods, exercise, and health data with the FitnessHub  app.</Text>
 
     </Stack>
   </Flex>
 
   <Flex flex={1} pt={25}>
-    <Button bg='rgb(68,208,123)' color='rgb(38,42,59)' _hover={{
+    <Link to='/signup'><Button bg='rgb(68,208,123)' color='rgb(38,42,59)' _hover={{
                   bg: "green.100",
-                }} size='lg' px={65}> Sign Up- It's Free </Button>
+                }} size='lg' px={65}> Sign Up- It's Free </Button></Link>
   </Flex>
 </Stack>
 
@@ -324,14 +325,14 @@ let handleSubmit = () =>{
 
 <Box className={BlogCss.container}>
   <Stack className={BlogCss.first} spacing={10} >
-    <Heading fontSize='45px' fontWeight='bold'>Track your food, exercise and health metrics with the Cronometer app.</Heading>
-    <Button  width='40%'
+    <Heading fontSize='45px' fontWeight='bold'>Track your food, exercise and health metrics with the FitnessHub  app.</Heading>
+    <Link to='/signup'><Button  width='40%'
             size='lg'
                 bg="rgb(255,103,51)"
                 color={"white"}
                 _hover={{
                   bg: "orange.400",
-                }} >Sign Up</Button>
+                }} >Sign Up</Button></Link>
   </Stack>
 
 <Box className={BlogCss.second}>

@@ -236,11 +236,12 @@ import {
                 </Box>
   
                 <HStack gap={5}>
-                  <FaFacebook size={35} color="Blue" />
-                  <FaGithub size={35} />
-                  <FaLinkedin size={35} color="Blue" />
-                  <MdEmail size={35} color="red" />
-                </HStack>
+                <a href='https://www.facebook.com/' rel="noreferrer" target="_blank"><FaFacebook size={35} color="Blue" /></a>
+                <a href="https://github.com/" rel="noreferrer" target='_blank'> <FaGithub size={35} /> </a>
+                    <a href="https://www.linkedin.com/in/prakash-gariya-a7580a239/" rel="noreferrer" target='_blank'> <FaLinkedin size={35} color="Blue" /> </a>
+                <a href="https://login.yahoo.com/?.src=ym&pspid=159600001&activity=mail-direct&.lang=en-IN&.intl=in&.done=https%3A%2F%2Fin.mail.yahoo.com%2Fd" rel="noreferrer" target='_blank'><MdEmail size={35} color="red" /></a>
+              </HStack>
+              
               </Stack>
   
               <hr style={{ height: "8px", color: "black", fontWeight: "bold" }} />
