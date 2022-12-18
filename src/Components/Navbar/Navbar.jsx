@@ -50,9 +50,11 @@ const Navbar = () => {
           <Image src={logo} />
         </Box>
         <Box>
-          <Link to="/"><Text fontSize={{ base: "lg", md: "4xl" }} fontWeight="700">
-            Fitnesshub
-          </Text></Link>
+          <Link to="/">
+            <Text fontSize={{ base: "lg", md: "4xl" }} fontWeight="700">
+              Fitnesshub
+            </Text>
+          </Link>
         </Box>
       </Box>
       <Box
@@ -61,15 +63,15 @@ const Navbar = () => {
         alignItems="center"
         justifyContent="space-evenly"
       >
-        <Popover>
+        <Popover trigger="hover">
           <PopoverTrigger>
             <Box
               display="flex"
               alignItems="center"
               gap={1}
               cursor="pointer"
-              onMouseDown={handlein}
-              onMouseOut={handleout}
+              onMouseEnter={handlein}
+              onMouseLeave={handleout}
             >
               <Text fontSize="xl" fontWeight="600">
                 Products
@@ -84,16 +86,23 @@ const Navbar = () => {
               flexDirection="column"
               gap={5}
               boxShadow="rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px"
+              onMouseEnter={handlein}
+              onMouseLeave={handleout}
             >
               <Link>
                 <Box display="flex" alignItems="center" gap={1}>
                   <Box maxWidth="20%">
-                    <Link to="/"> <Image src={logo} /></Link>
+                    <Link to="/">
+                      {" "}
+                      <Image src={logo} />
+                    </Link>
                   </Box>
                   <Box textAlign="left">
-                    <Link to="/"><Text fontSize="xl" fontWeight="600">
-                      Fitnesshub
-                    </Text></Link>
+                    <Link to="/">
+                      <Text fontSize="xl" fontWeight="600">
+                        Fitnesshub
+                      </Text>
+                    </Link>
                     <Text fontSize="md">For Individuals</Text>
                   </Box>
                 </Box>
@@ -104,9 +113,11 @@ const Navbar = () => {
                     <Image src={logo} />
                   </Box>
                   <Box textAlign="left">
-                    <Link to="/productPro" ><Text fontSize="xl" fontWeight="600">
-                      Fitnesshub Pro
-                    </Text></Link>
+                    <Link to="/productPro">
+                      <Text fontSize="xl" fontWeight="600">
+                        Fitnesshub Pro
+                      </Text>
+                    </Link>
                     <Text fontSize="md">For Healthcare Professionals</Text>
                   </Box>
                 </Box>
@@ -115,7 +126,7 @@ const Navbar = () => {
           </PopoverContent>
         </Popover>
 
-        <Link to="/support" >
+        <Link to="/support">
           <Text fontSize="xl" fontWeight="600">
             Support
           </Text>
