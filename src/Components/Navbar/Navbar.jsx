@@ -51,12 +51,15 @@ const Navbar = () => {
       paddingY="0.8%"
     >
       <Box display="flex" alignItems="center">
-        <Box maxWidth={{ base: "8%", md: "15%" }}>
+        <Box maxWidth={{ base: "8%", md: "12", lg: "15%" }}>
           <Image src={logo} />
         </Box>
         <Box>
           <Link to="/">
-            <Text fontSize={{ base: "lg", md: "4xl" }} fontWeight="700">
+            <Text
+              fontSize={{ base: "lg", md: "2xl", lg: "4xl" }}
+              fontWeight="700"
+            >
               Fitnesshub
             </Text>
           </Link>
@@ -64,7 +67,7 @@ const Navbar = () => {
       </Box>
       <Box
         width={{ lg: "90%", xl: "70%" }}
-        display={{ base: "none", md: "flex" }}
+        display={{ base: "none", lg: "flex" }}
         alignItems="center"
         justifyContent="space-evenly"
       >
@@ -157,7 +160,7 @@ const Navbar = () => {
         </Button>
         </Link>
       </Box>
-      <Box display={{ base: "block", md: "none" }}>
+      <Box display={{ base: "block", lg: "none" }}>
         <HamburgerIcon marginLeft="-100%" onClick={onOpen} />
         <Drawer placement="top" onClose={onClose} isOpen={isOpen}>
           <DrawerOverlay />
@@ -165,11 +168,14 @@ const Navbar = () => {
             <DrawerCloseButton />
             <DrawerHeader borderBottomWidth="1px">
               <Box display="flex" alignItems="center">
-                <Box maxWidth={{ base: "8%", md: "15%" }}>
+                <Box maxWidth={{ base: "8%", md: "12", lg: "15%" }}>
                   <Image src={logo} />
                 </Box>
                 <Box>
-                  <Text fontSize={{ base: "lg", md: "4xl" }} fontWeight="700">
+                  <Text
+                    fontSize={{ base: "lg", md: "2xl", lg: "4xl" }}
+                    fontWeight="700"
+                  >
                     Fitnesshub
                   </Text>
                 </Box>
@@ -177,15 +183,15 @@ const Navbar = () => {
             </DrawerHeader>
             <DrawerBody display="flex" flexDirection="column" gap={3}>
               <Box>
-                <Accordion defaultIndex={[0]} allowMultiple>
-                  <AccordionItem>
+                <Accordion defaultIndex={[0]} allowMultiple bg="none">
+                  <AccordionItem bg="none">
                     <h2>
-                      <AccordionButton padding="0">
+                      <AccordionButton padding="0" bg="none">
                         <Text
                           as="span"
                           textAlign="left"
                           flex={1}
-                          fontSize={{ base: "md" }}
+                          fontSize={{ base: "md", md: "md" }}
                           fontWeight="600"
                         >
                           Products
@@ -200,10 +206,13 @@ const Navbar = () => {
                             <Image src={logo} />
                           </Box>
                           <Box textAlign="left">
-                            <Text fontSize={{ base: "sm" }} fontWeight="600">
+                            <Text
+                              fontSize={{ base: "sm", md: "md" }}
+                              fontWeight="600"
+                            >
                               Fitnesshub
                             </Text>
-                            <Text fontSize={{ base: "sm" }}>
+                            <Text fontSize={{ base: "sm", md: "md" }}>
                               For Individuals
                             </Text>
                           </Box>
@@ -215,10 +224,13 @@ const Navbar = () => {
                             <Image src={logo} />
                           </Box>
                           <Box textAlign="left">
-                            <Text fontSize={{ base: "sm" }} fontWeight="600">
+                            <Text
+                              fontSize={{ base: "sm", md: "md" }}
+                              fontWeight="600"
+                            >
                               Fitnesshub Pro
                             </Text>
-                            <Text fontSize={{ base: "sm" }}>
+                            <Text fontSize={{ base: "sm", md: "md" }}>
                               For Healthcare Professionals
                             </Text>
                           </Box>
@@ -230,35 +242,35 @@ const Navbar = () => {
               </Box>
               <Box>
                 <Link to="/blog">
-                  <Text fontSize={{ base: "md" }} fontWeight="600">
+                  <Text fontSize={{ base: "md", md: "lg" }} fontWeight="600">
                     Blog
                   </Text>
                 </Link>
               </Box>
               <Box>
                 <Link to="/forms">
-                  <Text fontSize={{ base: "md" }} fontWeight="600">
+                  <Text fontSize={{ base: "md", md: "lg" }} fontWeight="600">
                     Forums
                   </Text>
                 </Link>
               </Box>
               <Box>
                 <Link to="/about">
-                  <Text fontSize={{ base: "md" }} fontWeight="600">
+                  <Text fontSize={{ base: "md", md: "lg" }} fontWeight="600">
                     About
                   </Text>
                 </Link>
               </Box>
               <Box>
                 <Link>
-                  <Text fontSize={{ base: "md" }} fontWeight="600">
+                  <Text fontSize={{ base: "md", md: "lg" }} fontWeight="600">
                     Support
                   </Text>
                 </Link>
               </Box>
 
               <Button bg="none" border="1px solid" maxWidth="25%">
-                <Text fontSize={{ base: "md" }}>LOG IN</Text>
+                <Text fontSize={{ base: "md", md: "lg" }}>LOG IN</Text>
               </Button>
               
             </DrawerBody>
