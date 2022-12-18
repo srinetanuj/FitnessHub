@@ -7,25 +7,20 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import axios from "axios";
 import { Link } from "react-router-dom";
 
 const Main = () => {
-  const [formdata, setFormdata] = React.useState([]);
+  var data = require("../../db.json");
 
-  const getFormData = async () => {
-    try {
-      let res = await axios.get(`http://localhost:8000/data`);
-      setFormdata(res.data);
-    } catch (err) {
-      console.log(err);
-    }
+  const [formdata, setFormdata] = React.useState(data);
+
+  console.log(formdata);
+
+  const handleclick = (e) => {
+    console.log(e.target.id);
+    localStorage.setItem("key", e.target.id);
   };
 
-  React.useEffect(() => {
-    getFormData();
-  }, []);
-  console.log(formdata);
   return (
     <Box maxWidth="95%" margin="auto">
       <Breadcrumb
@@ -63,9 +58,15 @@ const Main = () => {
               bg={index % 2 == 0 ? "#F5F5F5" : "white"}
               padding={2}
             >
-              <Text fontSize={{ base: ".9em", md: "lg" }} color="#FF6733">
-                {el.title}
-              </Text>
+              <Link to="/forms/element" onClick={handleclick}>
+                <Text
+                  id={el.id}
+                  fontSize={{ base: ".9em", md: "lg" }}
+                  color="#FF6733"
+                >
+                  {el.title}
+                </Text>
+              </Link>
               <Text fontSize={{ base: ".7em", md: "1em" }} marginBottom={3}>
                 {el.description}
               </Text>
@@ -123,7 +124,7 @@ const Main = () => {
             paddingY={2}
           >
             <Link>
-              <Text>All Categories</Text>
+              <Text fontWeight={500}>All Categories</Text>
             </Link>
             <Box
               width="fit-content"
@@ -146,8 +147,8 @@ const Main = () => {
               gap={10}
               textAlign="left"
             >
-              <Link>
-                <Text>{el.title}</Text>
+              <Link to="/forms/element" onClick={handleclick}>
+                <Text id={el.id}>{el.title}</Text>
               </Link>
               <Box
                 width="fit-content"
