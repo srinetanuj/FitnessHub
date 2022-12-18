@@ -59,7 +59,7 @@ const Dashboard = () => {
               />
               <TagLabel> EXERCISE </TagLabel>
             </Tag>
-
+   {/* Hello there I am Arnab Das */}
             <Tag size="lg" _hover={{ bg: "blue.100" }} borderRadius="full">
               <Avatar
                 src="https://cdn1.cronometer.com/brand/svg/add-biometric-icon.svg"
