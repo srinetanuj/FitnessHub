@@ -38,6 +38,9 @@ import Mquick from "../Components/support/mobileapp/Mquick";
 import Phome from "../Components/support/professional/Phome";
 import Subsciption from "../Components/support/professional/Subsciption";
 import Fhome from "../Components/support/Faq/Fhome";
+import Login from "../Components/Login/LoginPage";
+import SignupCard from "../Components/Login/SignupPage";
+
 import Home from "../Components/Home/Home";
 import ProductPro from "../Components/Product/ProductPro";
 import Formscategory from "../Components/ForumsComponents/Formscategory";
@@ -102,8 +105,15 @@ export function AllRoutes() {
 
       <Route path="/about" element={<About />} />
       <Route path="/forms" element={<Forms />}></Route>
+
+      <Route path="/login" element={<Login />}></Route>
+      <Route path="/signup" element={<SignupCard />}></Route>
+     
+     
+
       <Route path="/forms/element" element={<Formscategory />}></Route>
       <Route path="/forms/discusion" element={<Formsdiscusion />}></Route>
+
     </Routes>
   );
 }

@@ -43,7 +43,7 @@ const Navbar = () => {
       borderBottom="1px solid #D3D3D3"
       maxWidth="98%"
       margin="auto"
-      paddingY="2%"
+      paddingY="0.8%"
     >
       <Box display="flex" alignItems="center">
         <Box maxWidth={{ base: "8%", md: "15%" }}>
@@ -135,9 +135,11 @@ const Navbar = () => {
             About
           </Text>
         </Link>
+        <Link to="/login">
         <Button bg="none" border="1px solid">
           LOG IN
         </Button>
+        </Link>
       </Box>
       <Box display={{ base: "block", md: "none" }}>
         <HamburgerIcon marginLeft="-100%" onClick={onOpen} />
@@ -238,9 +240,11 @@ const Navbar = () => {
                   </Text>
                 </Link>
               </Box>
+
               <Button bg="none" border="1px solid" maxWidth="25%">
                 <Text fontSize={{ base: "md" }}>LOG IN</Text>
               </Button>
+              
             </DrawerBody>
           </DrawerContent>
         </Drawer>
