@@ -10,6 +10,7 @@ import {
   Stack,
   useColorModeValue,
 } from '@chakra-ui/react';
+import Chart1 from './Charts/Chart1';
 
 
 const Dashboard = () => {
@@ -32,7 +33,7 @@ const Dashboard = () => {
 </Flex>
 
 
-<HStack ml={10} gap={20} py={10} w='80%' bg='white' >
+<HStack ml={10} gap={20} py={10} w='80%' h="20px" bg='white' >
 
 
 <Tag size='lg' _hover={{bg:"blue.100"}} borderRadius='full'>
@@ -197,10 +198,6 @@ const Dashboard = () => {
        <Button> GET THE TIPS </Button>
       </Stack>
     </Center>
-
-
-
-
 
 
   

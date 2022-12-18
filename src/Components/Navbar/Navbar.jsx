@@ -25,10 +25,13 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { useContext } from "react";
+import { AuthContext } from "../../Context/loginContext";
 
 const Navbar = () => {
   const [state, setState] = React.useState(<ChevronDownIcon />);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { loginauth, handleLogin } = useContext(AuthContext);
 
   const handlein = (e) => {
     setState(<ChevronUpIcon />);
@@ -36,6 +39,8 @@ const Navbar = () => {
   const handleout = () => {
     setState(<ChevronDownIcon />);
   };
+
+  console.log(loginauth);
   return (
     <Box
       display="flex"
@@ -136,8 +141,8 @@ const Navbar = () => {
           </Text>
         </Link>
         <Link to="/login">
-        <Button bg="none" border="1px solid">
-          LOG IN
+        <Button bg="none" border="1px solid" onClick={handleLogin}>
+          {loginauth ? "LOGOUT" : "LOGIN"}
         </Button>
         </Link>
       </Box>
