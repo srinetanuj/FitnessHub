@@ -239,7 +239,7 @@ const Home = () => {
 
       <Box>
         <Heading as="h2" size="3xl" noOfLines={1}>
-          Cronometer reviews
+          Fitnesshub reviews
         </Heading>
 
         <SimpleGrid columns={1} spacing={10} w="80%" m="auto">
