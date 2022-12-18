@@ -155,8 +155,8 @@ const Navbar = () => {
           </Text>
         </Link>
         <Link to="/login">
-        <Button bg="none" border="1px solid" onClick={handleLogin}>
-          {loginauth ? "LOGIN" : "LOGOUT"}
+        <Button bg="none" border="1px solid">
+          {loginauth ? "LOGOUT" : "LOGIN"}
         </Button>
         </Link>
       </Box>
