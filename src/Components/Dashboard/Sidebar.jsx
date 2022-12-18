@@ -22,7 +22,7 @@ const Sidebar = () => {
     <Box  style={{width: isopen ? "18%" : "3%"}} >
 
 
-<Box   minH='100vh' bg='rgb(39,42,58)' color='white'  fontSize='18px' fontWeight='bold'>
+<Box minH='100vh' bg='rgb(39,42,58)' color='white'  fontSize='18px' fontWeight='400'>
   <Stack>
 
 <Flex justifyContent='space-around' py={4} _hover={{color:'orange.500' }} >
@@ -33,7 +33,7 @@ const Sidebar = () => {
 <Divider/>
 
 <Link to='/dashboard'>
-<Flex _hover={{color:'orange.500' }} >
+<Flex _hover={{color:'orange.500' }}>
    <Box mx={4}><RiDashboardFill /></Box>  
    <Text>Dashboard</Text>
 </Flex>
@@ -58,7 +58,7 @@ const Sidebar = () => {
     <h2>
       <AccordionButton  _hover={{color:'orange.500' }}>
       <Box as='span' mr={4} ><BsFillFileBarGraphFill /></Box>
-        <Box as="span" flex='1' textAlign='left' fontSize='18px' fontWeight='bold'>
+        <Box as="span" flex='1' textAlign='left' fontSize='18px' fontWeight='400'>
           Trends
         </Box>
         <AccordionIcon />

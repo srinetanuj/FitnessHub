@@ -16,6 +16,8 @@ import "../../App.css"
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useContext } from "react";
+import { AuthContext } from "../../Context/loginContext";
 
 
 export default function Login() {
@@ -24,6 +26,8 @@ export default function Login() {
   const [userEmail, setEmail] = useState("")
   const [Password, setPassword] = useState("")
   const [isAuth, setisAuth] = useState(false)
+
+  const { handleLogin } = useContext(AuthContext);
 
   const toast = useToast()
   const navigate = useNavigate();
@@ -65,6 +69,7 @@ export default function Login() {
         isClosable: true,
       })
       navigate('/dashboard')
+      handleLogin();
     }
 
     else if(isAuth==false){
