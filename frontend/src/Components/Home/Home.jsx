@@ -337,7 +337,7 @@ const Home = () => {
     <hr w="90%" m="auto" />
     <Box m={10}>
     <Text fontSize='2xl' >Help us spread the good word about nutrition.</Text>
-     <Text fontSize='2xl' color="teal" textDecoration="underline"><Link>Become an Affiliate</Link></Text>
+     <Text fontSize='2xl' color="teal" textDecoration="underline"><a target="_blank" href="https://www.shareasale.com/shareasale.cfm?merchantID=61121">Become an Affiliate</a></Text>
     </Box>
     </div>
   );
