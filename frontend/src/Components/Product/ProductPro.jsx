@@ -358,14 +358,14 @@ const ProductPro = () => {
 
         <Box my={10}>
         <Text fontSize='2xl'>Not sure if Cronometer Pro is right for you?</Text> 
-        <Text fontSize='2xl' color="teal.700" textDecoration="underline"><Link>Contact Us</Link></Text> 
+        <Text fontSize='2xl' color="teal.700" textDecoration="underline"><a href="https://cronometer.futuresimple.com/" target="_blank">Contact Us</a></Text> 
         </Box>
 
         <hr />
 
         <Box my={10}>
         <Text fontSize='2xl'>Help us spread the good word about nutrition.</Text> 
-        <Text fontSize='2xl' color="teal.700" textDecoration="underline"><Link>Become an Affiliate</Link></Text> 
+        <Text fontSize='2xl' color="teal.700" textDecoration="underline"><a target="_blank" href="https://www.shareasale.com/shareasale.cfm?merchantID=61121">Become an Affiliate</a></Text> 
         </Box>
 
     </div>

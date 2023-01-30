@@ -1,7 +1,8 @@
-import { Box, Link, SimpleGrid, Text } from "@chakra-ui/layout";
+import { Box, SimpleGrid, Text } from "@chakra-ui/layout";
 import React from "react";
 import logo from "../../Assets/Fitness_hub_bg_less.png";
 import { Image } from "@chakra-ui/image";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -27,10 +28,10 @@ const Footer = () => {
             fontSize={{ base: "xs", md: "md", lg: "xl" }}
           >
             <Text fontWeight="900">The Product</Text>
-            <Link>For Individuals</Link>
-            <Link>For Professionals</Link>
-            <Link>Privacy</Link>
-            <Link>Terms</Link>
+            <a  href="/">For Individuals</a>
+            <a   href="/productPro">For Professionals</a>
+            <a target="blank"  href="https://cronometer.com/privacy/">Privacy</a>
+            <a target="blank" href="https://cronometer.com/terms/">Terms</a>
           </Box>
         </Box>
         <Box>
@@ -41,11 +42,11 @@ const Footer = () => {
             fontSize={{ base: "xs", md: "md", md: "xl" }}
           >
             <Text fontWeight="900">The Company</Text>
-            <Link>About Us</Link>
-            <Link>Fitness Blog</Link>
-            <Link>Fitness Forums</Link>
-            <Link>Jobs</Link>
-            <Link>Support</Link>
+            <a href="/about">About Us</a>
+            <a href="/blog">Fitness Blog</a>
+            <a href="/forms">Fitness Forums</a>
+            <a target="blank" href="https://cronometer.com/jobs/">Jobs</a>
+            <a href="/support">Support</a>
           </Box>
         </Box>
         <Box>

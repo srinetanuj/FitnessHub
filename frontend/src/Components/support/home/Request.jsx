@@ -1,11 +1,13 @@
 import React,{useState} from 'react'
 
+
 import {Input,InputGroup,InputLeftElement,Flex,FormControl,FormErrorMessage,FormLabel,FormHelperText,Textarea,Button} from "@chakra-ui/react"
 import { SearchIcon } from '@chakra-ui/icons'
 import { Link } from 'react-router-dom'
 import Snavbar from './Hcomponent/Snavbar'
 
 const Request = () => {
+ 
   const [data,setData]=useState({
     email:"",
     subject:"",
@@ -37,6 +39,8 @@ setData({
   }
 
 
+
+
   return (
     
     <>
@@ -49,8 +53,13 @@ setData({
       pointerEvents='none'
       children={<SearchIcon color='gray.300' />}
     />
-    <Input type='text' placeholder='Search' />
+    <Input type='text'
+     placeholder='Search' 
+     
+     
+      />
   </InputGroup>
+  
 </Flex>
 <Flex justify="center" alignItems="center" direction="column" m="auto" w="58%" gap={4} mb={10}>
 <FormControl isInvalid={isError}>
