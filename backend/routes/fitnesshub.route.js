@@ -6,8 +6,15 @@ const jwt = require("jsonwebtoken");
 
 fitnesshubUserRouter.use(express.json());
 
-fitnesshubUserRouter.get("/",(req,res)=>{
-    res.send("Welcome to Fitnesshub")
+fitnesshubUserRouter.get("/",async(req,res)=>{
+    try{
+           const user = await fitnesshubUserModel.find();
+           res.send(user);
+        //    console.log(user)
+    }catch(e){
+         console.log(e);
+         console.log("Errpor while getting user")
+    }
 })
 
 fitnesshubUserRouter.post("/signup", async(req,res)=>{
@@ -17,7 +24,8 @@ fitnesshubUserRouter.post("/signup", async(req,res)=>{
         const find_user = await fitnesshubUserModel.find({email});
 
         if(find_user.length>0){
-            res.send("User are already exist");
+            console.log("User are already exist");
+            res.send(find_user)
         }else{
             bcrypt.hash(password, 5, async(err,hash_password)=>{
                 if(err){
@@ -37,14 +45,13 @@ fitnesshubUserRouter.post("/signup", async(req,res)=>{
 
 fitnesshubUserRouter.post("/login",async(req,res)=>{
     const {email,password} = req.body;
-
     try{
         const user = await fitnesshubUserModel.find({email});
         if(user.length>0){
             bcrypt.compare(password, user[0].password, (err,result)=>{
                 if(result){
                     const token = jwt.sign({userID: user[0]._id}, "anuj");
-                    res.send([{"message":"Login Successfully", "token":token, fname: user[0].fname}])
+                    res.send([{"message":"Login Successfully", "token":token,"id": user[0]._id , fname: user[0].fname}])
                 }else{
                     res.send([])
                 }
