@@ -23,39 +23,64 @@ import { Link, useNavigate } from "react-router-dom";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons"
 
 export default function SignupCard() {
+
   const [showPassword, setShowPassword] = useState(false);
-  const [pass, setPass] = useState("");
+  const [showcPassword, setShowcPassword] = useState(false);
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [cpassword, setCpassword] = useState("");
+  const [gender, setGender] = useState("");
+  const [birthday, setBirthday] = useState("");
+  const [height, setHeight] = useState("");
+  const [weight, setWeight] = useState("");
   const navigate = useNavigate();
   const toast = useToast();
 
-  const handlePass = (e) => {
-    setPass(e.target.value);
-  }
+ 
 
-  const handleSubmit = () => {
+  const handleSubmit=()=>{
+    const payload = {
+        fname,
+        lname,
+        email,
+        password,
+        cpassword,
+        gender,
+        birthday,
+        height,
+        weight
+    }
 
-    if(pass!==""){
-      toast({
-        title: 'Signup Successfull',
-        position: "top",
-        description: "... redirecting to login page",
-        status: 'success',
-        duration: 7000,
-        isClosable: true,
-      })
-      navigate("/login");
-    } else if (pass === ""){
-      toast({
-        title: 'Fields are empty',
-        position: "top",
-        description: "Please fill all the fields",
-        status: 'warning',
-        duration: 7000,
-        isClosable: true,
-      })
+    if(password!==cpassword){
+      alert("Password and Confirm Password did not match");
+    }else {
+       fetch("https://defiant-tutu-tick.cyclic.app/users/signup",{
+          method: "POST",
+          body: JSON.stringify(payload),
+          headers: {
+            "Content-Type": "application/json"
+          }
+       })
+       .then((res)=>res.json())
+       .then((res)=>{
+        console.log(res);
+        if(res.length>0){
+          alert("User already registered. Please login!");
+          navigate("/login");
+        }else{
+          alert("Signup Successfully  Please login!")
+          navigate("/login");
+        }
+       })
+      
+       .catch((e)=>console.log(e))
     }
     
+
   }
+
   return (
     <>
       <Flex
@@ -85,26 +110,46 @@ export default function SignupCard() {
                 <Box>
                   <FormControl id="firstName" isRequired>
                     <FormLabel>First Name</FormLabel>
-                    <Input type="text" />
+                    <Input
+                     type="text"
+                     value={fname}
+                     placeholder="Enter first name"
+                     onChange={(e) => setFname(e.target.value)}
+                    />
                   </FormControl>
                 </Box>
                 <Box>
                   <FormControl id="lastName">
                     <FormLabel>Last Name</FormLabel>
-                    <Input type="text" />
+                    <Input 
+                       type="text"
+                       value={lname}
+                       placeholder="Enter last name"
+                       onChange={(e) => setLname(e.target.value)}
+                    />
                   </FormControl>
                 </Box>
               </HStack>
               <FormControl id="email" isRequired>
                 <FormLabel>Email address</FormLabel>
-                <Input type="email" />
+                <Input 
+                  type="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </FormControl>
               <FormControl id="password" isRequired>
                 <FormLabel>Password</FormLabel>
                 <InputGroup>
-                  <Input onChange={handlePass} type={showPassword ? "text" : "password"} />
+                <Input 
+                     type={showPassword ? "text" : "password"}
+                     placeholder="Enter your password"
+                     value={password}
+                     onChange={(e) => setPassword(e.target.value)}
+                  />
                   <InputRightElement h={"full"}>
-                    <Button
+                  <Button
                       variant={"ghost"}
                       onClick={() =>
                         setShowPassword((showPassword) => !showPassword)
@@ -117,12 +162,17 @@ export default function SignupCard() {
 
                 <FormLabel>Confirm Password</FormLabel>
                 <InputGroup>
-                  <Input type={showPassword ? "text" : "password"} />
+                <Input 
+                     type={showcPassword ? "text" : "password"}
+                     placeholder="Confirm your password"
+                     value={cpassword}
+                     onChange={(e) => setCpassword(e.target.value)}
+                  />
                   <InputRightElement h={"full"}>
-                    <Button
+                  <Button
                       variant={"ghost"}
                       onClick={() =>
-                        setShowPassword((showPassword) => !showPassword)
+                        setShowcPassword((showcPassword) => !showcPassword)
                       }
                     >
                       {showPassword ? <ViewIcon /> : <ViewOffIcon />}
@@ -178,8 +228,12 @@ export default function SignupCard() {
                 </Box>
               </HStack>
               <FormControl id="date" isRequired>
-                <FormLabel>Birthday 🎂</FormLabel>
-                <Input type="date" />
+                <FormLabel>Date-of-birth</FormLabel>
+                <Input 
+                  type="date"
+                  value={birthday}
+                   onChange={(e)=>setBirthday(e.target.value)}
+                  />
               </FormControl>
               <FormControl id="height">
                 <FormLabel>Height</FormLabel>
@@ -209,12 +263,21 @@ export default function SignupCard() {
                     <option>11</option>
                   </Select>
                   <Text>or</Text>
-                  <Input type="number" placeholder="cm" />
+                  <Input 
+                     type="number"
+                      placeholder="cm"
+                      value={height}
+                      onChange={(e)=>setHeight(e.target.value)}
+                    />
                 </InputGroup>
 
                 <FormLabel>Weight</FormLabel>
                 <InputGroup gap={20}>
-                  <Input type="number" placeholder="--" />
+                <Input type="number"
+                   placeholder="--"
+                    value={weight}
+                    onChange={(e)=>setWeight(e.target.value)}
+                    />
                   <Select>
                     <option>Pounds</option>
                     <option>KG</option>

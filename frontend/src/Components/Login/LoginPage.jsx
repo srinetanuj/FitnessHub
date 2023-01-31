@@ -22,9 +22,12 @@ import { AuthContext } from "../../Context/loginContext";
 
 export default function Login() {
 
-  const [userData, setuserData] = useState([])
-  const [userEmail, setEmail] = useState("")
-  const [Password, setPassword] = useState("")
+  const [ email, setEmail ] = useState("");
+  const [ password, setPassword ] = useState("");
+  
+  // const [userData, setuserData] = useState([])
+  // const [userEmail, setEmail] = useState("")
+  // const [Password, setPassword] = useState("")
   const [isAuth, setisAuth] = useState(false)
 
   const { handleLogin } = useContext(AuthContext);
@@ -32,57 +35,66 @@ export default function Login() {
   const toast = useToast()
   const navigate = useNavigate();
 
-  const handleEmail = (e) => {
-    setEmail(e.target.value)
-  }
-  const handlePassword = (e) => {
-    setPassword(e.target.value)
-  }
+  // const handleEmail = (e) => {
+  //   setEmail(e.target.value)
+  // }
+  // const handlePassword = (e) => {
+  //   setPassword(e.target.value)
+  // }
 
-  const fetchData = async() => {
-    let res = await axios.get(`https://api.npoint.io/202ccf9cd556cc190333/users`)
-    setuserData(res.data);
-  }
+  // const fetchData = async() => {
+  //   let res = await axios.get(`https://api.npoint.io/202ccf9cd556cc190333/users`)
+  //   setuserData(res.data);
+  // }
 
-  useEffect(()=> {
-    fetchData();
-  },[])
+  // useEffect(()=> {
+  //   fetchData();
+  // },[])
 
-  const handleSubmit = () => {
-    let obj = {userEmail, Password};
+  // const handleSubmit = () => {
+  //   let obj = {userEmail, Password};
 
-    for(let i=0; i<userData.length; i++){
-      if(obj.userEmail === userData[i].email){
-        setisAuth(true);
-        break;
-      }
+  //   for(let i=0; i<userData.length; i++){
+  //     if(obj.userEmail === userData[i].email){
+  //       setisAuth(true);
+  //       break;
+  //     }
+  //   }
+
+  const handleSubmit =()=>{
+    const payload = {
+      email,
+      password,
     }
- 
+   
+    fetch("https://defiant-tutu-tick.cyclic.app/users/login", {
+        method:"POST",
+        body: JSON.stringify(payload),
+        headers: {
+          "Content-type":"application/json"
+        }
     
-    if(isAuth){
-      toast({
-        title: 'Login Success!',
-        position: "top",
-        description: "You have successfully logged in",
-        status: 'success',
-        duration: 7000,
-        isClosable: true,
       })
-      navigate('/dashboard')
-      handleLogin();
-    }
-
-    else if(isAuth==false){
-      toast({
-        title: 'Wrong Credential!',
-        position: "top",
-        description: "Please check you creds and try again",
-        status: 'error',
-        duration: 7000,
-        isClosable: true,
-      })
-    }
+      .then(res => res.json())
+      .then(res =>{
+        console.log(res);
+      if(res.length>0){
+          // console.log(res[0]);
+          localStorage.setItem("token", res[0].token);
+          localStorage.setItem("fname", res[0].fname);
+          alert("Login Successful!");
+          navigate("/")
+          window.location.reload(true);
+      }else{
+        alert("Wrong credentials! Signup first");
+        navigate("/signup")
+      }
+    })
+    .catch(e=>console.log(e));
   }
+  
+  
+  
 
   return (
     <div className="login-page-mains">
@@ -92,7 +104,7 @@ export default function Login() {
           <Stack align={"center"}>
             <Heading fontSize={"4xl"}>Log in to your Fitness Hub account</Heading>
             <Text fontSize={"lg"} color={"gray.600"}>
-              Use you registered Email in <Link color={"blue.400"}>Fitness Hub;</Link>{" "}
+              Use you registered Email in <Link to="/" color={"blue.400"}>Fitness Hub;</Link>{" "}
             </Text>
           </Stack>
           <Box
@@ -104,11 +116,21 @@ export default function Login() {
             <Stack spacing={4}>
               <FormControl id="email">
                 <FormLabel>Email address</FormLabel>
-                <Input type="email" onChange={handleEmail}/>
+                <Input 
+                type="email" 
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e)=>setEmail(e.target.value)}
+                />
               </FormControl>
               <FormControl id="password">
                 <FormLabel>Password</FormLabel>
-                <Input type="password" onChange={handlePassword}/>
+                <Input 
+                   type="password"
+                   placeholder="Enter your password"
+                   value={password}
+                   onChange={(e)=>setPassword(e.target.value)}
+                 />
               </FormControl>
               <Stack spacing={10}>
                 <Stack
