@@ -6,8 +6,14 @@ const jwt = require("jsonwebtoken");
 
 fitnesshubUserRouter.use(express.json());
 
-fitnesshubUserRouter.get("/",(req,res)=>{
-    res.send("Welcome to Fitnesshub")
+fitnesshubUserRouter.get("/",async(req,res)=>{
+    try{
+           const user = await fitnesshubUserModel.find();
+           res.send(user);
+    }catch(e){
+         console.log(e);
+         console.log("Errpor while getting user")
+    }
 })
 
 fitnesshubUserRouter.post("/signup", async(req,res)=>{
