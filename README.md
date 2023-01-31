@@ -1,4 +1,4 @@
-##LANGUAGES USED
+# LANGUAGES USED
 
 ![1](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![2](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -20,6 +20,12 @@ Busy with your daily life hectic schedule. Fitnesshub comes as saviour. This app
 
 ![Logo](https://i.ibb.co/37PngqP/Fitness-hub.png)
 
+<img src="https://i.postimg.cc/NfsKH7rV/Screenshot-14.png" alt="img1">
+<img src="https://i.postimg.cc/3wm86dvm/Screenshot-19.png" alt="img2">
+<img src="https://i.postimg.cc/wjsgy7FZ/Screenshot-15.png" alt="img3">
+<img src="https://i.postimg.cc/QMsw8tzp/Screenshot-16.png" alt="img4">
+<img src="https://i.postimg.cc/qgVQ1DV8/Screenshot-20.png" alt="img5">
+<img src="https://i.postimg.cc/xT63Jdqv/Screenshot-18.png" alt="img7">
 
 ## Tech Stack
 
